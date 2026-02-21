@@ -38,3 +38,12 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+table {
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #f2f2f2;
+}

@@ -47,3 +47,30 @@ table {
 th {
     background-color: #f2f2f2;
 }
+
+details {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 14px 0;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary h2 {
+  display: inline;
+  margin: 0;
+}
+
+details[open] {
+  border-color: #bcd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}

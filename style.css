@@ -74,3 +74,11 @@ details[open] {
   border-color: #bcd;
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
+
+.resources {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  background: #fcfcfd;
+}

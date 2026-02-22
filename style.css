@@ -82,3 +82,22 @@ details[open] {
   border-radius: 12px;
   background: #fcfcfd;
 }
+.resources {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  background-color: #f9fbff;
+}
+
+.resources h4 {
+  margin-top: 20px;
+}
+
+.resources ul {
+  margin-left: 18px;
+}
+
+.resources li {
+  margin-bottom: 8px;
+}

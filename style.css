@@ -130,3 +130,11 @@ details[open] {
 .highlight-row td {
   border-left: 4px solid #1b4f91;
 }
+
+.attendance {
+  margin-top: 25px;
+  padding: 18px;
+  background-color: #fff8e6;
+  border-left: 6px solid #d4a017;
+  border-radius: 12px;
+}

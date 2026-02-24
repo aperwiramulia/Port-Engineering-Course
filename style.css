@@ -176,3 +176,14 @@ details[open] {
   box-shadow:0 6px 20px rgba(0,0,0,.06);
 }
 .card h2{ margin-top:0; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #0b4f8a;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn:hover { opacity: 0.9; }

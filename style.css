@@ -187,3 +187,18 @@ details[open] {
   font-weight: 700;
 }
 .btn:hover { opacity: 0.9; }
+
+.submit-btn{
+  display:inline-block;
+  padding:12px 20px;
+  background:#1e3a8a;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.submit-btn:hover{
+  background:#2563eb;
+}

@@ -202,3 +202,21 @@ details[open] {
 .submit-btn:hover{
   background:#2563eb;
 }
+
+.assignment-status{
+  background:#f8fafc;
+  border-left:5px solid #1e3a8a;
+  padding:16px 18px;
+  margin:20px 0;
+  border-radius:8px;
+}
+
+.status-open{
+  color:#15803d;
+  font-weight:700;
+}
+
+.status-closed{
+  color:#b91c1c;
+  font-weight:700;
+}

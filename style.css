@@ -220,3 +220,11 @@ details[open] {
   color:#b91c1c;
   font-weight:700;
 }
+
+/* Lecture title consistency */
+.lecture summary,
+.lecture-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}

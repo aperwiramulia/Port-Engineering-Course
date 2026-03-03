@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lectures</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lectures</title>
+  <meta name="description" content="Lecture modules and notes for Port Engineering course.">
+  <meta property="og:title" content="Port Engineering — Lectures">
+  <meta property="og:description" content="Lecture modules, notes, and resources for Port Engineering by Prof. Ahmad Perwira Mulia.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
-    <h1>Lectures</h1>
+  <div class="site-brand">
+    <div class="logo">PE</div>
+    <div>
+      <h1>Port Engineering</h1>
+      <p class="muted">Course Website – Prof. Ahmad Perwira Mulia</p>
+    </div>
+  </div>
 </header>
 
-<nav>
+<nav role="navigation">
+  <div class="nav-inner">
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     <a href="index.html">Home</a>
-    <a href="lectures.html">Lectures</a>
+    <a href="lectures.html" class="active">Lectures</a>
     <a href="assignments.html">Assignments</a>
+    <a href="attendance.html">Attendance</a>
     <a href="resources.html">Resources</a>
+  </div>
 </nav>
 
-<div class="container">
+<main id="main-content" class="container">
 
 <h2>Port Engineering – Lecture Modules</h2>
 
@@ -468,5 +487,8 @@ River discharge ↓ (estuary ports) → suspended sediment plume → basin silta
 © 2026 Prof. Ahmad Perwira Mulia
 </footer>
 
+</div>
+
+<script src="scripts.min.js"></script>
 </body>
 </html>

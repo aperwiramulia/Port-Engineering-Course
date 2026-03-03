@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Class Attendance – Port Engineering</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class Attendance – Port Engineering</title>
+  <meta name="description" content="Attendance forms and summaries for the Port Engineering course.">
+  <meta property="og:title" content="Port Engineering — Attendance">
+  <meta property="og:description" content="Class attendance forms and summaries for Port Engineering by Prof. Ahmad Perwira Mulia.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
 
-<div class="container">
-<h1>Attendance</h1>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav>
+<header>
+  <div class="site-brand">
+    <div class="logo">PE</div>
+    <div>
+      <h1>Port Engineering</h1>
+      <p class="muted">Course Website – Prof. Ahmad Perwira Mulia</p>
+    </div>
+  </div>
+</header>
+
+<nav role="navigation">
+  <div class="nav-inner">
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     <a href="index.html">Home</a>
     <a href="lectures.html">Lectures</a>
     <a href="assignments.html">Assignments</a>
+    <a href="attendance.html" class="active">Attendance</a>
     <a href="resources.html">Resources</a>
+  </div>
 </nav>
+
+<main id="main-content" class="container">
+<h1>Attendance</h1>
 
 <section class="card">
   <h2>Submit Attendance (Today)</h2>
@@ -50,5 +72,6 @@
 
 </div>
 
+<script src="scripts.min.js"></script>
 </body>
 </html>

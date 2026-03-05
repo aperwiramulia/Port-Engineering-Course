@@ -237,7 +237,16 @@ async function getAssistantReply(userMessage, state) {
 
   const data = await response.json();
   const answer = data && data.answer ? data.answer : '';
-  return (answer || quickReply).trim();
+  const finalAnswer = (answer || quickReply).trim();
+
+  if (!localReply && finalAnswer === quickReply) {
+    const externalReply = await getExternalKnowledgeReply(userMessage);
+    if (externalReply) {
+      return externalReply;
+    }
+  }
+
+  return finalAnswer;
 }
 
 function getPageContext() {
@@ -250,6 +259,11 @@ function getPageContext() {
 
 function getOfflineReply(rawMessage, state, allowGenericFallback = true) {
   const message = rawMessage.toLowerCase();
+
+  const domainReply = getDomainLibraryReply(message);
+  if (domainReply) {
+    return domainReply;
+  }
 
   const glossaryReply = getGlossaryReply(message);
   if (glossaryReply) {
@@ -574,34 +588,47 @@ async function getExternalKnowledgeReply(question) {
   }
 
   try {
-    const expandedQuery = expandExternalQuery(cleaned);
-    const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(expandedQuery)}&limit=1&namespace=0&format=json&origin=*`;
-    const searchResponse = await fetch(searchUrl);
-    if (!searchResponse.ok) {
-      return '';
+    const queryCandidates = buildExternalQueryCandidates(cleaned);
+    const seenTitles = new Set();
+
+    for (const query of queryCandidates) {
+      const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(query)}&limit=3&namespace=0&format=json&origin=*`;
+      const searchResponse = await fetch(searchUrl);
+      if (!searchResponse.ok) {
+        continue;
+      }
+
+      const searchData = await searchResponse.json();
+      const titles = Array.isArray(searchData) ? searchData[1] : null;
+      if (!Array.isArray(titles) || !titles.length) {
+        continue;
+      }
+
+      for (const titleRaw of titles) {
+        const title = cleanText(titleRaw);
+        if (!title || seenTitles.has(title.toLowerCase())) {
+          continue;
+        }
+        seenTitles.add(title.toLowerCase());
+
+        const summaryUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
+        const summaryResponse = await fetch(summaryUrl);
+        if (!summaryResponse.ok) {
+          continue;
+        }
+
+        const summaryData = await summaryResponse.json();
+        const extract = cleanText(summaryData && summaryData.extract ? summaryData.extract : '');
+        if (!extract) {
+          continue;
+        }
+
+        const shortExtract = extract.length > 560 ? `${extract.slice(0, 557)}...` : extract;
+        return `External reference (${title}): ${shortExtract}`;
+      }
     }
 
-    const searchData = await searchResponse.json();
-    const titles = Array.isArray(searchData) ? searchData[1] : null;
-    const topTitle = Array.isArray(titles) && titles.length ? String(titles[0]) : '';
-    if (!topTitle) {
-      return '';
-    }
-
-    const summaryUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(topTitle)}`;
-    const summaryResponse = await fetch(summaryUrl);
-    if (!summaryResponse.ok) {
-      return '';
-    }
-
-    const summaryData = await summaryResponse.json();
-    const extract = cleanText(summaryData && summaryData.extract ? summaryData.extract : '');
-    if (!extract) {
-      return '';
-    }
-
-    const shortExtract = extract.length > 500 ? `${extract.slice(0, 497)}...` : extract;
-    return `External reference (${topTitle}): ${shortExtract}`;
+    return '';
   } catch (error) {
     return '';
   }
@@ -618,6 +645,16 @@ function expandExternalQuery(query) {
   }
 
   return trimmed;
+}
+
+function buildExternalQueryCandidates(question) {
+  const expanded = expandExternalQuery(question);
+  return dedupeArray([
+    expanded,
+    `${expanded} port engineering`,
+    `${expanded} maritime transport`,
+    `${expanded} harbor engineering`
+  ]).filter(Boolean);
 }
 
 function scoreKeywordMatch(normalizedQuestion, keyword) {
@@ -731,3 +768,107 @@ function getGlossaryReply(message) {
 
   return '';
 }
+
+function getDomainLibraryReply(message) {
+  const normalizedQuestion = normalizeText(message);
+  if (!normalizedQuestion) {
+    return '';
+  }
+
+  let bestScore = 0;
+  let bestAnswer = '';
+
+  PORT_DOMAIN_LIBRARY.forEach((entry) => {
+    const terms = Array.isArray(entry.terms) ? entry.terms : [];
+    const score = terms.reduce((sum, term) => sum + scoreKeywordMatch(normalizedQuestion, term), 0);
+    if (score > bestScore) {
+      bestScore = score;
+      bestAnswer = entry.answer;
+    }
+  });
+
+  return bestScore >= 3 ? bestAnswer : '';
+}
+
+const PORT_DOMAIN_LIBRARY = [
+  {
+    terms: ['berth occupancy ratio', 'bor', 'berth utilization'],
+    answer: 'BOR (Berth Occupancy Ratio) is the fraction of time a berth is occupied in a period: BOR = berth time used / berth time available. It is usually shown in percent. High BOR improves asset use, but excessive BOR can increase waiting time and reduce schedule reliability.'
+  },
+  {
+    terms: ['teu', 'twenty foot equivalent unit', 'container throughput'],
+    answer: 'TEU (Twenty-foot Equivalent Unit) is the standard container capacity unit. 1 x 20-foot container = 1 TEU, and a 40-foot container is typically counted as 2 TEU. Ports use TEU for throughput, terminal capacity, and benchmarking.'
+  },
+  {
+    terms: ['types of ports', 'port classification', 'gateway port', 'transshipment hub'],
+    answer: 'Common port categories include container, dry bulk, liquid bulk, general cargo, Ro-Ro, and multipurpose ports. By logistics role, ports are often gateway ports (serving hinterland demand) or transshipment hubs (relay nodes between shipping routes).'
+  },
+  {
+    terms: ['types of terminal', 'terminal classification', 'container terminal', 'bulk terminal'],
+    answer: 'Main terminal types are: container terminal (TEU, STS-yard flow), dry bulk terminal (tons, unloading-conveyor-stockyard chain), liquid bulk terminal (pipeline-tank system), general cargo terminal (break-bulk handling), and Ro-Ro terminal (ramp-based vehicle flow).'
+  },
+  {
+    terms: ['river port risk', 'estuary port risk', 'channel siltation', 'sedimentation'],
+    answer: 'River/estuary ports are strongly exposed to sedimentation and channel siltation, requiring recurring maintenance dredging. Other common risks are variable currents, changing water levels, navigation constraints, and flood-related disruption.'
+  },
+  {
+    terms: ['sea port risk', 'coastal port risk', 'storm surge', 'wave exposure'],
+    answer: 'Sea/coastal ports face stronger wave and storm exposure. Key risks include berth downtime in rough weather, overtopping, breakwater damage, scour near marine structures, and coastal erosion impacts.'
+  },
+  {
+    terms: ['difference river and sea port', 'compare river port and sea port', 'river vs sea port'],
+    answer: 'River ports are usually constrained by sedimentation and dredging reliability, while sea ports are constrained by wave climate and storm loading. River-port strategy emphasizes channel maintenance; sea-port strategy emphasizes wave protection and structural resilience.'
+  },
+  {
+    terms: ['quay wall design', 'wharf design', 'berthing structure'],
+    answer: 'Quay/wharf design must combine geotechnical capacity, structural loads, berthing/mooring forces, and serviceability limits. Typical checks include global stability, settlement, deformation, and durability in marine exposure.'
+  },
+  {
+    terms: ['fender design', 'berthing energy', 'ship impact'],
+    answer: 'Fender systems absorb berthing energy and limit reaction force transferred to vessel and structure. Design normally evaluates vessel size, berthing velocity, approach angle, environmental conditions, and fender performance curves.'
+  },
+  {
+    terms: ['mooring system', 'mooring line', 'mooring force'],
+    answer: 'Mooring systems keep vessels safely positioned at berth under wind, wave, and current loads. Engineering checks include line tension limits, bollard capacity, ship motions, and operational envelope during loading/unloading.'
+  },
+  {
+    terms: ['breakwater design', 'rubble mound breakwater', 'caisson breakwater'],
+    answer: 'Breakwater design targets basin tranquility and structural stability under design storms. Key items include wave climate, water level extremes, armor stability, toe/scour protection, overtopping performance, and long-term maintenance.'
+  },
+  {
+    terms: ['dredging', 'maintenance dredging', 'capital dredging'],
+    answer: 'Capital dredging creates required depths for new channels/basins, while maintenance dredging restores depth lost by sedimentation. For many estuary ports, maintenance dredging is a recurring OPEX driver and must be planned strategically.'
+  },
+  {
+    terms: ['under keel clearance', 'ukc', 'squat allowance'],
+    answer: 'Under Keel Clearance (UKC) is the safety distance between keel and seabed. Channel depth planning typically includes static draft plus squat, tide/wave allowances, and operational safety margins.'
+  },
+  {
+    terms: ['vessel turnaround time', 'turnaround', 'ship waiting time'],
+    answer: 'Vessel turnaround time measures total time in port from arrival to departure. It combines waiting, berthing, and cargo operation time, and is a primary indicator of terminal service quality.'
+  },
+  {
+    terms: ['yard occupancy ratio', 'yor', 'yard utilization'],
+    answer: 'Yard Occupancy Ratio (YOR) indicates how full the storage yard is relative to capacity. High YOR can reduce stacking efficiency and increase re-handling, so it should be managed with gate, berth, and yard flow coordination.'
+  },
+  {
+    terms: ['port master plan', 'phased development', 'port planning'],
+    answer: 'A port master plan aligns long-term demand forecast, functional zoning, marine access, hinterland connectivity, environmental constraints, and phased investment strategy into a coherent development roadmap.'
+  },
+  {
+    terms: ['hinterland connectivity', 'port logistics', 'intermodal'],
+    answer: 'Hinterland connectivity links the port to road, rail, river, or inland depots. Strong intermodal links reduce dwell time and gate congestion, improving end-to-end supply-chain performance.'
+  },
+  {
+    terms: ['container dwell time', 'dwell time'],
+    answer: 'Container dwell time is the average time a container stays in terminal storage before exit or transshipment. Long dwell time increases yard pressure and can lower productivity.'
+  },
+  {
+    terms: ['transshipment', 'feeder', 'hub and spoke'],
+    answer: 'Transshipment is cargo transfer between vessels at an intermediate hub. In a hub-and-spoke system, large mainline vessels connect to regional feeder services to distribute cargo.'
+  },
+  {
+    terms: ['port state control', 'psc'],
+    answer: 'Port State Control (PSC) is the inspection regime by port authorities to verify foreign vessels comply with international safety, environmental, and labor conventions.'
+  }
+];

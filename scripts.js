@@ -919,4 +919,4 @@ const PORT_DOMAIN_LIBRARY = [
 ];
 
 const BOOK_TITLE = 'Handbook of Port and Harbor Engineering (Tsinker, 1997)';
-const BOOK_URL = 'https://www.google.com/search?q=Handbook+of+Port+and+Harbor+Engineering+Tsinker+1997+Springer';
+const BOOK_URL = 'https://link.springer.com/book/10.1007/978-1-4613-1291-8';

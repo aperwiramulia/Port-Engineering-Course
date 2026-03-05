@@ -21,6 +21,15 @@ Each item supports:
 - `keywords` (list of trigger terms)
 - `answer`
 
+### Port Engineering Domain Library
+
+The assistant also loads `port-domain.json`, a larger domain Q&A library for general port-engineering questions beyond website content.
+
+- Format per entry:
+	- `terms` (keywords/synonyms)
+	- `answer` (concise technical explanation)
+- This file is intended for editable domain expansion without modifying JavaScript.
+
 ### Add Per-Page Exact Facts
 
 Each HTML page can include hidden metadata for exact answers:

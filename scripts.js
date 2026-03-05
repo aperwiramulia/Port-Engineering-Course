@@ -27,6 +27,7 @@ function initPortAIAssistant() {
     isLoading: false,
     history: [],
     knowledgeBase: [],
+    portDomainLibrary: [],
     pageKnowledge: null
   };
 
@@ -131,6 +132,12 @@ function initPortAIAssistant() {
   loadKnowledgeBase(state).then((count) => {
     if (count > 0) {
       addAssistantMessage(messagesEl, `Knowledge base loaded (${count} topics).`);
+    }
+  });
+
+  loadPortDomainLibrary(state).then((count) => {
+    if (count > 0) {
+      addAssistantMessage(messagesEl, `Port domain library loaded (${count} entries).`);
     }
   });
 
@@ -260,7 +267,7 @@ function getPageContext() {
 function getOfflineReply(rawMessage, state, allowGenericFallback = true) {
   const message = rawMessage.toLowerCase();
 
-  const domainReply = getDomainLibraryReply(message);
+  const domainReply = getDomainLibraryReply(message, state.portDomainLibrary);
   if (domainReply) {
     return domainReply;
   }
@@ -337,6 +344,21 @@ async function loadKnowledgeBase(state) {
     const data = await response.json();
     state.knowledgeBase = Array.isArray(data) ? data : [];
     return state.knowledgeBase.length;
+  } catch (error) {
+    return 0;
+  }
+}
+
+async function loadPortDomainLibrary(state) {
+  try {
+    const response = await fetch('port-domain.json', { cache: 'no-cache' });
+    if (!response.ok) {
+      return 0;
+    }
+
+    const data = await response.json();
+    state.portDomainLibrary = Array.isArray(data) ? data : [];
+    return state.portDomainLibrary.length;
   } catch (error) {
     return 0;
   }
@@ -769,16 +791,20 @@ function getGlossaryReply(message) {
   return '';
 }
 
-function getDomainLibraryReply(message) {
+function getDomainLibraryReply(message, externalLibrary) {
   const normalizedQuestion = normalizeText(message);
   if (!normalizedQuestion) {
     return '';
   }
 
+  const library = Array.isArray(externalLibrary) && externalLibrary.length
+    ? externalLibrary
+    : PORT_DOMAIN_LIBRARY;
+
   let bestScore = 0;
   let bestAnswer = '';
 
-  PORT_DOMAIN_LIBRARY.forEach((entry) => {
+  library.forEach((entry) => {
     const terms = Array.isArray(entry.terms) ? entry.terms : [];
     const score = terms.reduce((sum, term) => sum + scoreKeywordMatch(normalizedQuestion, term), 0);
     if (score > bestScore) {

@@ -43,5 +43,50 @@
     "topic": "study_plan",
     "keywords": ["study", "how to prepare", "exam", "revision", "plan"],
     "answer": "Recommended study plan: 1) review lecture notes and key terms, 2) map each terminal type to flow and KPI, 3) practice explaining one Indonesian port case, 4) solve one conceptual layout exercise with assumptions and trade-offs."
+  },
+  {
+    "topic": "kpi_bor",
+    "keywords": ["bor", "berth occupancy ratio", "berth utilization", "kpi berth"],
+    "answer": "BOR means Berth Occupancy Ratio, the percentage of time a berth is occupied over a period. A common expression is BOR = (berth time used / berth time available) x 100%. Very high BOR can indicate congestion and vessel waiting risk."
+  },
+  {
+    "topic": "kpi_turnaround",
+    "keywords": ["turnaround time", "vessel turnaround", "ship turnaround", "port kpi"],
+    "answer": "Turnaround time is the total time a vessel spends in port from arrival to departure. It reflects operational efficiency and is influenced by waiting time, berth productivity, and cargo handling performance."
+  },
+  {
+    "topic": "port_types",
+    "keywords": ["types of port", "port classification", "gateway port", "transshipment", "hub port"],
+    "answer": "Port types include container, dry bulk, liquid bulk, general cargo, Ro-Ro, and multipurpose ports. By role, ports are often classified as gateway ports (serving hinterland demand) and transshipment hubs (relay nodes between shipping routes)."
+  },
+  {
+    "topic": "terminal_types",
+    "keywords": ["types of terminal", "terminal classification", "container terminal", "bulk terminal", "ro-ro terminal"],
+    "answer": "Main terminal types are: container terminal (TEU-oriented), dry bulk terminal (unloader-conveyor-stockyard flow), liquid bulk terminal (pipeline-tank systems), general cargo terminal (break-bulk handling), and Ro-Ro terminal (ramp-based vehicle flow)."
+  },
+  {
+    "topic": "river_port_risks",
+    "keywords": ["river port risk", "estuary port risk", "riverine port", "channel siltation", "sedimentation risk"],
+    "answer": "River/estuary ports commonly face sedimentation and channel siltation, requiring recurring maintenance dredging. Other risks include variable currents/water levels, navigation constraints, and flood-related disruptions."
+  },
+  {
+    "topic": "seaport_risks",
+    "keywords": ["sea port risk", "coastal port risk", "open sea", "storm surge", "wave risk"],
+    "answer": "Sea/coastal ports are more exposed to wave loading, storm surge, and berth downtime during rough conditions. Key engineering risks include breakwater stability, overtopping, scour, and coastal erosion impacts on marine structures."
+  },
+  {
+    "topic": "river_vs_sea",
+    "keywords": ["river vs sea port", "difference river and sea port", "compare estuary and coastal port"],
+    "answer": "River ports are typically constrained by sedimentation and channel maintenance, while sea ports are more constrained by wave climate and storm exposure. River-port strategy emphasizes dredging reliability; sea-port strategy emphasizes protection layout and structural resilience."
+  },
+  {
+    "topic": "multipurpose_terminal",
+    "keywords": ["multipurpose terminal", "why multipurpose", "indonesia multipurpose"],
+    "answer": "Multipurpose terminals are common where cargo mix is diverse and demand is variable. They offer flexibility across cargo types, but usually trade off peak productivity compared with fully specialized terminals."
+  },
+  {
+    "topic": "dredging_opex",
+    "keywords": ["dredging opex", "maintenance dredging", "siltation cost", "long term cost"],
+    "answer": "Maintenance dredging is a recurring operational cost, especially in estuary ports. Long-term port competitiveness should include dredging frequency, disposal strategy, and channel reliability impacts in OPEX planning."
   }
 ]

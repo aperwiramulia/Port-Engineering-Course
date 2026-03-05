@@ -236,6 +236,11 @@ function getPageContext() {
 function getOfflineReply(rawMessage, state) {
   const message = rawMessage.toLowerCase();
 
+  const conceptReply = getCoreConceptReply(message);
+  if (conceptReply) {
+    return conceptReply;
+  }
+
   const contextAware = getContextAwareFallback(rawMessage, state.pageKnowledge);
   if (contextAware) {
     return contextAware;
@@ -310,14 +315,7 @@ function findBestKnowledgeAnswer(question, knowledgeBase) {
 
   knowledgeBase.forEach((item) => {
     const keywords = Array.isArray(item.keywords) ? item.keywords : [];
-    let score = 0;
-
-    keywords.forEach((keyword) => {
-      const normalizedKeyword = normalizeText(keyword);
-      if (normalizedKeyword && normalizedQuestion.includes(normalizedKeyword)) {
-        score += 1;
-      }
-    });
+    const score = keywords.reduce((sum, keyword) => sum + scoreKeywordMatch(normalizedQuestion, keyword), 0);
 
     if (score > bestScore && item.answer) {
       bestScore = score;
@@ -325,7 +323,7 @@ function findBestKnowledgeAnswer(question, knowledgeBase) {
     }
   });
 
-  return bestScore > 0 ? bestAnswer : '';
+  return bestScore >= 2 ? bestAnswer : '';
 }
 
 function normalizeText(value) {
@@ -490,13 +488,7 @@ function getMetadataAnswer(message, metadata) {
       return;
     }
 
-    let score = 0;
-    keywords.forEach((keyword) => {
-      const normalizedKeyword = normalizeText(keyword);
-      if (normalizedKeyword && message.includes(normalizedKeyword)) {
-        score += 1;
-      }
-    });
+    const score = keywords.reduce((sum, keyword) => sum + scoreKeywordMatch(message, keyword), 0);
 
     if (score > bestScore) {
       bestScore = score;
@@ -504,7 +496,7 @@ function getMetadataAnswer(message, metadata) {
     }
   });
 
-  return bestScore > 0 ? bestAnswer : '';
+  return bestScore >= 2 ? bestAnswer : '';
 }
 
 function getMetadataEvidenceLines(metadata) {
@@ -547,4 +539,65 @@ function getMetadataEvidenceLines(metadata) {
   }
 
   return lines.slice(0, 20);
+}
+
+function scoreKeywordMatch(normalizedQuestion, keyword) {
+  const normalizedKeyword = normalizeText(keyword);
+  if (!normalizedKeyword) {
+    return 0;
+  }
+
+  if (normalizedQuestion === normalizedKeyword) {
+    return 4;
+  }
+
+  if (normalizedQuestion.includes(normalizedKeyword)) {
+    return 3;
+  }
+
+  const keywordParts = normalizedKeyword.split(' ').filter((part) => part.length > 2);
+  if (!keywordParts.length) {
+    return 0;
+  }
+
+  let tokenHits = 0;
+  keywordParts.forEach((part) => {
+    if (normalizedQuestion.includes(part)) {
+      tokenHits += 1;
+    }
+  });
+
+  if (tokenHits >= Math.max(2, Math.ceil(keywordParts.length * 0.6))) {
+    return 2;
+  }
+
+  return tokenHits >= 1 ? 1 : 0;
+}
+
+function getCoreConceptReply(message) {
+  if (/\bbor\b|berth occupancy ratio/.test(message)) {
+    return 'BOR (Berth Occupancy Ratio) is the percentage of time a berth is occupied during a period. It is commonly estimated as (total berth time used / total berth time available) x 100%. Higher BOR means higher utilization, but too high BOR can increase vessel waiting time and reduce service reliability.';
+  }
+
+  if (/types? of port|port types?|classification of ports?/.test(message)) {
+    return 'Ports can be classified by function and cargo: container ports, dry bulk ports, liquid bulk terminals, general cargo ports, Ro-Ro ports, and multipurpose ports. They can also be classified by role: gateway ports, transshipment hubs, river/estuary ports, and coastal/deep-sea ports.';
+  }
+
+  if (/types? of terminal|terminal types?|container terminal|dry bulk|liquid bulk|ro-ro|general cargo/.test(message)) {
+    return 'Main terminal types are: 1) Container terminal (TEU-based, STS-RTG/RMG flow), 2) Dry bulk terminal (tons, unloader-conveyor-stockyard), 3) Liquid bulk terminal (pipeline-tank systems), 4) General cargo terminal (break-bulk handling), and 5) Ro-Ro terminal (ramp-yard-gate vehicle flow).';
+  }
+
+  if (/river port|estuary port|riverine port|risks? at river ports?/.test(message)) {
+    return 'Typical river/estuary port risks include high sedimentation and channel siltation, frequent dredging OPEX, variable currents and water levels, maneuvering constraints, and potential flooding impacts. Operationally, draft limitations and navigation reliability are major concerns.';
+  }
+
+  if (/sea port|coastal port|open sea port|risks? at sea ports?/.test(message)) {
+    return 'Typical sea/coastal port risks include stronger wave exposure, storm surge, berth downtime during rough seas, breakwater damage risk, and coastal erosion/scour around structures. Design must focus on wave climate, protection layout, and resilient marine structures.';
+  }
+
+  if (/difference between river and sea port|compare river and sea port/.test(message)) {
+    return 'River ports are usually more constrained by sedimentation and channel maintenance, while sea ports are more exposed to wave and storm loading. River ports often prioritize dredging strategy; sea ports prioritize wave protection and structural resilience.';
+  }
+
+  return '';
 }

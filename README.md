@@ -9,6 +9,7 @@ This website now includes a floating AI assistant for students.
 - It can answer common questions about lectures, assignments, attendance, and resources using built-in course guidance.
 - It loads structured answers from `ai-knowledge.json` (editable by instructor).
 - It automatically reads current page headings and key bullet points to ground responses in visible content.
+- It can also use external public knowledge (Wikipedia summary lookup) when local course content is insufficient.
 - It can call a live AI model through a backend proxy endpoint.
 
 ### Edit Course Knowledge

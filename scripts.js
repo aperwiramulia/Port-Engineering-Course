@@ -186,8 +186,19 @@ function addAssistantMessage(container, text) {
 }
 
 async function getAssistantReply(userMessage, state) {
-  const quickReply = getOfflineReply(userMessage, state);
+  const localReply = getOfflineReply(userMessage, state, false);
+  const quickReply = localReply || getOfflineReply(userMessage, state, true);
+
   if (!state.proxyEndpoint) {
+    if (localReply) {
+      return localReply;
+    }
+
+    const externalReply = await getExternalKnowledgeReply(userMessage);
+    if (externalReply) {
+      return externalReply;
+    }
+
     return quickReply;
   }
 
@@ -217,6 +228,10 @@ async function getAssistantReply(userMessage, state) {
   });
 
   if (!response.ok) {
+    const externalReply = await getExternalKnowledgeReply(userMessage);
+    if (externalReply) {
+      return externalReply;
+    }
     return quickReply;
   }
 
@@ -233,7 +248,7 @@ function getPageContext() {
   return `Title: ${title}; Heading: ${headingText}; PageType: ${pageType}; URL: ${location.pathname}`;
 }
 
-function getOfflineReply(rawMessage, state) {
+function getOfflineReply(rawMessage, state, allowGenericFallback = true) {
   const message = rawMessage.toLowerCase();
 
   const conceptReply = getCoreConceptReply(message);
@@ -273,6 +288,10 @@ function getOfflineReply(rawMessage, state) {
 
   if (/summarize|summary|this page/.test(message)) {
     return buildPageSummary();
+  }
+
+  if (!allowGenericFallback) {
+    return '';
   }
 
   return 'I can help with lecture concepts, assignment guidance, attendance, and resources. Try asking: "Any assignment deadlines?", "Summarize lecture 1", or "Explain breakwater design basics".';
@@ -539,6 +558,45 @@ function getMetadataEvidenceLines(metadata) {
   }
 
   return lines.slice(0, 20);
+}
+
+async function getExternalKnowledgeReply(question) {
+  const cleaned = cleanText(question);
+  if (!cleaned || cleaned.split(' ').length < 2) {
+    return '';
+  }
+
+  try {
+    const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(cleaned)}&limit=1&namespace=0&format=json&origin=*`;
+    const searchResponse = await fetch(searchUrl);
+    if (!searchResponse.ok) {
+      return '';
+    }
+
+    const searchData = await searchResponse.json();
+    const titles = Array.isArray(searchData) ? searchData[1] : null;
+    const topTitle = Array.isArray(titles) && titles.length ? String(titles[0]) : '';
+    if (!topTitle) {
+      return '';
+    }
+
+    const summaryUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(topTitle)}`;
+    const summaryResponse = await fetch(summaryUrl);
+    if (!summaryResponse.ok) {
+      return '';
+    }
+
+    const summaryData = await summaryResponse.json();
+    const extract = cleanText(summaryData && summaryData.extract ? summaryData.extract : '');
+    if (!extract) {
+      return '';
+    }
+
+    const shortExtract = extract.length > 500 ? `${extract.slice(0, 497)}...` : extract;
+    return `External reference (${topTitle}): ${shortExtract}`;
+  } catch (error) {
+    return '';
+  }
 }
 
 function scoreKeywordMatch(normalizedQuestion, keyword) {

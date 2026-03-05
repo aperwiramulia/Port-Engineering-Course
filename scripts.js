@@ -269,17 +269,21 @@ function getOfflineReply(rawMessage, state, allowGenericFallback = true) {
 
   const domainReply = getDomainLibraryReply(message, state.portDomainLibrary);
   if (domainReply) {
-    return domainReply;
+    return withBookReference(domainReply, true);
   }
 
   const glossaryReply = getGlossaryReply(message);
   if (glossaryReply) {
-    return glossaryReply;
+    return withBookReference(glossaryReply, true);
   }
 
   const conceptReply = getCoreConceptReply(message);
   if (conceptReply) {
-    return conceptReply;
+    return withBookReference(conceptReply, true);
+  }
+
+  if (/book|textbook|handbook|reference book|port and harbor engineering/.test(message)) {
+    return `Recommended textbook: ${BOOK_TITLE}. Open: ${BOOK_URL}`;
   }
 
   const contextAware = getContextAwareFallback(rawMessage, state.pageKnowledge);
@@ -309,7 +313,10 @@ function getOfflineReply(rawMessage, state, allowGenericFallback = true) {
   }
 
   if (/breakwater|quay|fender|mooring|dredging|sediment/.test(message)) {
-    return 'These are core design elements in port engineering. Study environmental loading (wave/tide/current), structural response, and operational constraints together.';
+    return withBookReference(
+      'These are core design elements in port engineering. Study environmental loading (wave/tide/current), structural response, and operational constraints together.',
+      true
+    );
   }
 
   if (/summarize|summary|this page/.test(message)) {
@@ -599,6 +606,18 @@ function getMetadataEvidenceLines(metadata) {
   }
 
   return lines.slice(0, 20);
+}
+
+function withBookReference(answer, include) {
+  if (!include) {
+    return answer;
+  }
+
+  if (!answer || answer.includes(BOOK_URL)) {
+    return answer;
+  }
+
+  return `${answer}\n\nRecommended reading: ${BOOK_TITLE} (${BOOK_URL})`;
 }
 
 async function getExternalKnowledgeReply(question) {
@@ -898,3 +917,6 @@ const PORT_DOMAIN_LIBRARY = [
     answer: 'Port State Control (PSC) is the inspection regime by port authorities to verify foreign vessels comply with international safety, environmental, and labor conventions.'
   }
 ];
+
+const BOOK_TITLE = 'Handbook of Port and Harbor Engineering (Tsinker, 1997)';
+const BOOK_URL = 'https://www.google.com/search?q=Handbook+of+Port+and+Harbor+Engineering+Tsinker+1997+Springer';

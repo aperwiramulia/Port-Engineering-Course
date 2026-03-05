@@ -251,6 +251,11 @@ function getPageContext() {
 function getOfflineReply(rawMessage, state, allowGenericFallback = true) {
   const message = rawMessage.toLowerCase();
 
+  const glossaryReply = getGlossaryReply(message);
+  if (glossaryReply) {
+    return glossaryReply;
+  }
+
   const conceptReply = getCoreConceptReply(message);
   if (conceptReply) {
     return conceptReply;
@@ -562,12 +567,15 @@ function getMetadataEvidenceLines(metadata) {
 
 async function getExternalKnowledgeReply(question) {
   const cleaned = cleanText(question);
-  if (!cleaned || cleaned.split(' ').length < 2) {
+  const tokens = cleaned.split(' ').filter(Boolean);
+  const hasUsefulToken = tokens.some((token) => token.length >= 3);
+  if (!cleaned || !hasUsefulToken) {
     return '';
   }
 
   try {
-    const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(cleaned)}&limit=1&namespace=0&format=json&origin=*`;
+    const expandedQuery = expandExternalQuery(cleaned);
+    const searchUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(expandedQuery)}&limit=1&namespace=0&format=json&origin=*`;
     const searchResponse = await fetch(searchUrl);
     if (!searchResponse.ok) {
       return '';
@@ -597,6 +605,19 @@ async function getExternalKnowledgeReply(question) {
   } catch (error) {
     return '';
   }
+}
+
+function expandExternalQuery(query) {
+  const trimmed = cleanText(query);
+  if (!trimmed) {
+    return query;
+  }
+
+  if (trimmed.split(' ').length === 1) {
+    return `${trimmed} shipping port`;
+  }
+
+  return trimmed;
 }
 
 function scoreKeywordMatch(normalizedQuestion, keyword) {
@@ -655,6 +676,57 @@ function getCoreConceptReply(message) {
 
   if (/difference between river and sea port|compare river and sea port/.test(message)) {
     return 'River ports are usually more constrained by sedimentation and channel maintenance, while sea ports are more exposed to wave and storm loading. River ports often prioritize dredging strategy; sea ports prioritize wave protection and structural resilience.';
+  }
+
+  return '';
+}
+
+function getGlossaryReply(message) {
+  const glossary = [
+    {
+      terms: ['teu', 'twenty-foot equivalent unit', 'container unit'],
+      answer: 'TEU (Twenty-foot Equivalent Unit) is the standard unit for container capacity. One 20-foot container equals 1 TEU, while one 40-foot container is typically counted as 2 TEU.'
+    },
+    {
+      terms: ['dwt', 'deadweight tonnage'],
+      answer: 'DWT (Deadweight Tonnage) is the maximum weight a ship can safely carry, including cargo, fuel, freshwater, crew, and supplies.'
+    },
+    {
+      terms: ['loa', 'length overall'],
+      answer: 'LOA (Length Overall) is the maximum length of a vessel from the foremost to the aftmost fixed point, used in berth planning and maneuvering analysis.'
+    },
+    {
+      terms: ['draft', 'draught', 'ship draft'],
+      answer: 'Draft (draught) is the vertical distance between waterline and keel. It determines minimum channel and berth depth requirements.'
+    },
+    {
+      terms: ['ukc', 'under keel clearance'],
+      answer: 'UKC (Under Keel Clearance) is the safety distance between the ship keel and seabed. It accounts for tide, squat, wave motion, and uncertainty margins.'
+    },
+    {
+      terms: ['sts crane', 'ship to shore crane'],
+      answer: 'STS (Ship-to-Shore) cranes are quay cranes used to load and unload containers between vessels and terminal transport equipment.'
+    },
+    {
+      terms: ['rtg', 'rubber tyred gantry'],
+      answer: 'RTG (Rubber-Tyred Gantry) cranes are used in container yards to stack and retrieve containers with flexible mobility.'
+    },
+    {
+      terms: ['rmg', 'rail mounted gantry'],
+      answer: 'RMG (Rail-Mounted Gantry) cranes operate on fixed rails in container yards, providing high-density stacking and automated yard options.'
+    },
+    {
+      terms: ['breakwater overtopping', 'overtopping'],
+      answer: 'Breakwater overtopping occurs when wave run-up exceeds crest elevation and water passes over the structure, affecting safety and operations behind the breakwater.'
+    }
+  ];
+
+  const normalized = normalizeText(message);
+  for (const item of glossary) {
+    const matched = item.terms.some((term) => scoreKeywordMatch(normalized, term) >= 2);
+    if (matched) {
+      return item.answer;
+    }
   }
 
   return '';

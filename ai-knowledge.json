@@ -1,0 +1,47 @@
+[
+  {
+    "topic": "assignment_deadline",
+    "keywords": ["deadline", "due", "assignment 1", "submit", "late policy"],
+    "answer": "Assignment 1 is marked OPEN with deadline 2 March 2026 at 23:59 WIB, with 10% grade deduction per day for late submission. Assignment 2 is marked COMING SOON. Always confirm details on the Assignments page."
+  },
+  {
+    "topic": "assignment_submission",
+    "keywords": ["submit assignment", "google form", "file name", "pdf", "one submission"],
+    "answer": "Submit Assignment 1 through the official Google Form linked on the Assignments page. Use file name format A1_Name_StudentID.pdf. The page notes that file upload requires Google login and only one submission is allowed."
+  },
+  {
+    "topic": "lecture_1_focus",
+    "keywords": ["lecture 1", "introduction", "port types", "container", "bulk", "indonesia"],
+    "answer": "Lecture 1 covers why ports matter, engineering perspective, terminal handling logic, and Indonesian port context. A strong study strategy is to compare dry bulk, general cargo, container, and liquid bulk terminals based on flow logic, equipment, and KPIs."
+  },
+  {
+    "topic": "lecture_2_focus",
+    "keywords": ["lecture 2", "layout", "planning", "coastal interaction", "sedimentation", "estuary"],
+    "answer": "Lecture 2 focuses on conceptual port layout, functional zoning, wave exposure, and sedimentation risk. Prioritize safe entrance alignment, protected basin design, and practical cargo flow between berth, storage, and gate connections."
+  },
+  {
+    "topic": "attendance",
+    "keywords": ["attendance", "absen", "presence", "class form", "summary"],
+    "answer": "Use the Attendance page to fill the embedded attendance form, then review the attendance summary table provided on the same page."
+  },
+  {
+    "topic": "resources",
+    "keywords": ["resource", "reading", "journal", "slides", "video", "pianc", "unctad"],
+    "answer": "The Resources page includes lecture PDFs, reading materials, and external references such as PIANC and UNCTAD. Use those references for technical depth and current maritime context."
+  },
+  {
+    "topic": "concept_breakwater",
+    "keywords": ["breakwater", "wave", "diffraction", "stability"],
+    "answer": "Breakwater design should connect environmental loading (wave climate, water level, current) with stability checks and operational objectives, such as creating acceptable wave conditions inside the port basin."
+  },
+  {
+    "topic": "concept_quay_fender_mooring",
+    "keywords": ["quay wall", "fender", "mooring", "berthing", "ship impact"],
+    "answer": "Quay walls, fenders, and mooring systems are a linked system: quay provides structural support, fenders absorb berthing energy, and mooring controls vessel position under operational and environmental loads."
+  },
+  {
+    "topic": "study_plan",
+    "keywords": ["study", "how to prepare", "exam", "revision", "plan"],
+    "answer": "Recommended study plan: 1) review lecture notes and key terms, 2) map each terminal type to flow and KPI, 3) practice explaining one Indonesian port case, 4) solve one conceptual layout exercise with assumptions and trade-offs."
+  }
+]

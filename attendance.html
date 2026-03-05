@@ -4,16 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Class Attendance – Port Engineering</title>
-  <meta name="description" content="Attendance forms and summaries for the Port Engineering course.">
-  <meta property="og:title" content="Port Engineering — Attendance">
-  <meta property="og:description" content="Class attendance forms and summaries for Port Engineering by Prof. Ahmad Perwira Mulia.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header>
   <div class="site-brand">
@@ -25,18 +18,18 @@
   </div>
 </header>
 
-<nav role="navigation">
+<nav>
   <div class="nav-inner">
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     <a href="index.html">Home</a>
     <a href="lectures.html">Lectures</a>
     <a href="assignments.html">Assignments</a>
-    <a href="attendance.html" class="active">Attendance</a>
+    <a href="attendance.html">Attendance</a>
     <a href="resources.html">Resources</a>
   </div>
 </nav>
 
-<main id="main-content" class="container">
+<div class="container">
 <h1>Attendance</h1>
 
 <section class="card">
@@ -72,6 +65,37 @@
 
 </div>
 
-<script src="scripts.min.js"></script>
+<script class="pe-ai-meta" type="application/json">
+{
+  "page": "attendance",
+  "facts": [
+    "Attendance submission is completed through the embedded form on this page.",
+    "Students should provide name and student number (NIM).",
+    "Attendance summary is available from the embedded spreadsheet."
+  ],
+  "quickAnswers": [
+    {
+      "keywords": ["attendance", "present", "absen", "submit attendance"],
+      "answer": "To submit attendance, fill in the embedded form on this page with your name and NIM."
+    },
+    {
+      "keywords": ["summary", "record", "list", "detailed list"],
+      "answer": "Attendance summary is shown in the embedded sheet, and a detailed list is available via the button below it."
+    }
+  ],
+  "links": [
+    {
+      "label": "Attendance Form",
+      "purpose": "Daily attendance submission"
+    },
+    {
+      "label": "Attendance Summary",
+      "purpose": "Published attendance records"
+    }
+  ]
+}
+</script>
+
+<script src="scripts.js"></script>
 </body>
 </html>

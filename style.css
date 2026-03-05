@@ -30,23 +30,24 @@ header{
 .site-brand p{margin:0;font-size:0.95rem;opacity:0.9}
 
 nav{
-  background:transparent;
+  background:#ffffff;
   padding:10px 16px;
+  box-shadow:0 6px 18px rgba(12,24,50,0.04);
 }
 nav .nav-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:18px;align-items:center}
-nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;opacity:0.95}
-nav a:hover{background:rgba(255,255,255,0.08)}
+nav a{color:var(--accent-2);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;opacity:0.95}
+nav a:hover{background:rgba(11,79,138,0.06)}
 
 .logo{width:48px;height:48px;border-radius:10px;background:#fff;color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-weight:800;margin-right:8px}
 .logo{font-family:Inter,system-ui,sans-serif}
 
-.nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:20px;padding:6px 8px;cursor:pointer}
+.nav-toggle{display:none;background:transparent;border:0;color:var(--accent-2);font-size:20px;padding:6px 8px;cursor:pointer}
 
 @media (max-width:720px){
   .nav-toggle{display:inline-block}
   .nav-inner{gap:8px}
   .nav-inner a{display:none}
-  .nav-inner.open a{display:block;background:transparent;color:#fff;padding:8px 0;width:100%}
+  .nav-inner.open a{display:block;background:transparent;color:var(--accent-2);padding:8px 0;width:100%}
   .nav-inner{flex-direction:column;align-items:flex-start;padding:8px 0}
 }
 

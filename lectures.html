@@ -556,56 +556,66 @@ Required Channel/Harbor Depth
     </figure>
 
     <figure style="margin: 18px 0;">
-      <svg viewBox="0 0 960 390" width="100%" role="img" aria-label="Comparison of spring and neap tides referenced to chart datum with spring range about 3.5 meters">
+      <svg viewBox="0 0 960 420" width="100%" role="img" aria-label="Two-week semidiurnal tidal record showing full spring-neap cycle and 3.5 meter spring range">
         <defs>
-          <marker id="rangeArrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <marker id="rangeArrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
             <path d="M0,0 L8,4 L0,8 z" fill="#2f2f2f"></path>
           </marker>
         </defs>
 
-        <rect x="0" y="0" width="960" height="390" fill="#f8fafc"></rect>
-        <rect x="90" y="38" width="830" height="290" rx="8" fill="#ffffff" stroke="#d7dee8" stroke-width="2"></rect>
+        <rect x="0" y="0" width="960" height="420" fill="#f8fafc"></rect>
+        <rect x="85" y="36" width="845" height="318" rx="8" fill="#ffffff" stroke="#d7dee8" stroke-width="2"></rect>
 
-        <line x1="130" y1="65" x2="130" y2="300" stroke="#1f2937" stroke-width="2"></line>
-        <line x1="130" y1="300" x2="890" y2="300" stroke="#1f2937" stroke-width="2"></line>
-        <text x="816" y="328" font-size="16" fill="#1f2937">Time (days)</text>
-        <text x="18" y="58" font-size="16" fill="#1f2937">Level vs CD (m)</text>
+        <line x1="120" y1="70" x2="120" y2="315" stroke="#1f2937" stroke-width="2"></line>
+        <line x1="120" y1="315" x2="890" y2="315" stroke="#1f2937" stroke-width="2"></line>
+        <text x="780" y="343" font-size="16" fill="#1f2937">Time (days, 14-day window)</text>
+        <text x="16" y="60" font-size="16" fill="#1f2937">Water Level vs CD (m)</text>
 
-        <line x1="130" y1="180" x2="890" y2="180" stroke="#2563eb" stroke-width="2"></line>
-        <text x="896" y="185" font-size="15" fill="#2563eb">MSL</text>
+        <line x1="120" y1="192" x2="890" y2="192" stroke="#2563eb" stroke-width="2"></line>
+        <text x="896" y="197" font-size="15" fill="#2563eb">MSL</text>
 
-        <line x1="130" y1="106" x2="890" y2="106" stroke="#dc2626" stroke-width="2" stroke-dasharray="7,5"></line>
-        <text x="896" y="111" font-size="15" fill="#dc2626">+1.75 m (Spring HW)</text>
+        <line x1="120" y1="106" x2="890" y2="106" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="6,5"></line>
+        <text x="896" y="111" font-size="14" fill="#dc2626">Spring HW (+1.75 m)</text>
 
-        <line x1="130" y1="254" x2="890" y2="254" stroke="#059669" stroke-width="2" stroke-dasharray="7,5"></line>
-        <text x="896" y="259" font-size="15" fill="#059669">-1.75 m (Spring LW)</text>
+        <line x1="120" y1="278" x2="890" y2="278" stroke="#059669" stroke-width="1.8" stroke-dasharray="6,5"></line>
+        <text x="896" y="283" font-size="14" fill="#059669">Spring LW (-1.75 m)</text>
 
-        <line x1="130" y1="142" x2="890" y2="142" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,6"></line>
-        <text x="896" y="147" font-size="15" fill="#b45309">+0.9 m (Neap HW)</text>
+        <line x1="120" y1="148" x2="890" y2="148" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5,5"></line>
+        <text x="896" y="153" font-size="14" fill="#b45309">Neap HW (~ +0.9 m)</text>
 
-        <line x1="130" y1="218" x2="890" y2="218" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="6,6"></line>
-        <text x="896" y="223" font-size="15" fill="#0369a1">-0.9 m (Neap LW)</text>
+        <line x1="120" y1="236" x2="890" y2="236" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="5,5"></line>
+        <text x="896" y="241" font-size="14" fill="#0369a1">Neap LW (~ -0.9 m)</text>
 
-        <path d="M145,180 C190,106 245,106 290,180 C335,254 390,254 435,180 C480,106 535,106 580,180 C625,254 680,254 725,180 C770,106 825,106 870,180"
-              fill="none" stroke="#dc2626" stroke-width="3.5"></path>
-        <path d="M145,180 C190,142 245,142 290,180 C335,218 390,218 435,180 C480,142 535,142 580,180 C625,218 680,218 725,180 C770,142 825,142 870,180"
-              fill="none" stroke="#0f766e" stroke-width="3"></path>
+        <line x1="120" y1="315" x2="890" y2="315" stroke="#111111" stroke-width="1.5"></line>
+        <text x="896" y="320" font-size="14" fill="#111111">Chart Datum (CD)</text>
 
-        <line x1="742" y1="106" x2="742" y2="254" stroke="#2f2f2f" stroke-width="2" marker-start="url(#rangeArrow)" marker-end="url(#rangeArrow)"></line>
-        <rect x="752" y="166" width="148" height="30" rx="4" fill="#fff7ed" stroke="#f59e0b"></rect>
-        <text x="760" y="186" font-size="16" fill="#9a3412" font-weight="700">Spring Range ~ 3.5 m</text>
+        <line x1="120" y1="315" x2="120" y2="325" stroke="#334155" stroke-width="1.5"></line>
+        <line x1="313" y1="315" x2="313" y2="325" stroke="#334155" stroke-width="1.5"></line>
+        <line x1="505" y1="315" x2="505" y2="325" stroke="#334155" stroke-width="1.5"></line>
+        <line x1="698" y1="315" x2="698" y2="325" stroke="#334155" stroke-width="1.5"></line>
+        <line x1="890" y1="315" x2="890" y2="325" stroke="#334155" stroke-width="1.5"></line>
+        <text x="114" y="342" font-size="13" fill="#334155">0</text>
+        <text x="300" y="342" font-size="13" fill="#334155">3.5</text>
+        <text x="498" y="342" font-size="13" fill="#334155">7</text>
+        <text x="684" y="342" font-size="13" fill="#334155">10.5</text>
+        <text x="881" y="342" font-size="13" fill="#334155">14</text>
 
-        <rect x="155" y="74" width="168" height="28" rx="4" fill="#fee2e2" stroke="#dc2626"></rect>
-        <text x="166" y="93" font-size="15" fill="#991b1b" font-weight="700">Spring Tide Curve</text>
+        <path d="M120,192 C132,120 144,106 156,192 C168,278 180,264 192,192 C204,130 216,116 228,192 C240,268 252,254 264,192 C276,138 288,128 300,192 C312,256 324,246 336,192 C348,152 360,144 372,192 C384,242 396,234 408,192 C420,166 432,160 444,192 C456,228 468,222 480,192 C492,178 504,174 516,192 C528,220 540,216 552,192 C564,168 576,160 588,192 C600,236 612,228 624,192 C636,154 648,146 660,192 C672,248 684,240 696,192 C708,140 720,130 732,192 C744,262 756,252 768,192 C780,126 792,114 804,192 C816,274 828,262 840,192 C852,112 864,106 876,192"
+              fill="none" stroke="#7c3aed" stroke-width="3.2"></path>
 
-        <rect x="155" y="106" width="160" height="28" rx="4" fill="#ccfbf1" stroke="#0f766e"></rect>
-        <text x="166" y="125" font-size="15" fill="#134e4a" font-weight="700">Neap Tide Curve</text>
+        <line x1="856" y1="106" x2="856" y2="278" stroke="#2f2f2f" stroke-width="2" marker-start="url(#rangeArrow2)" marker-end="url(#rangeArrow2)"></line>
+        <rect x="690" y="178" width="156" height="30" rx="4" fill="#fff7ed" stroke="#f59e0b"></rect>
+        <text x="699" y="198" font-size="16" fill="#9a3412" font-weight="700">Spring Range ~ 3.5 m</text>
 
-        <line x1="130" y1="300" x2="890" y2="300" stroke="#111111" stroke-width="1.5"></line>
-        <text x="896" y="305" font-size="15" fill="#111111">Chart Datum (CD)</text>
+        <rect x="145" y="78" width="232" height="30" rx="4" fill="#ede9fe" stroke="#7c3aed"></rect>
+        <text x="156" y="98" font-size="15" fill="#4c1d95" font-weight="700">Semidiurnal Tide (modulated)</text>
+
+        <text x="134" y="122" font-size="13" fill="#475569">Spring</text>
+        <text x="495" y="166" font-size="13" fill="#475569">Neap</text>
+        <text x="842" y="122" font-size="13" fill="#475569">Spring</text>
       </svg>
       <figcaption>
-        <strong>Figure 2.</strong> Spring-neap comparison referenced to CD: spring tidal range is illustrated at about 3.5 m, while neap tide has a smaller range.
+        <strong>Figure 2.</strong> Two-week semidiurnal record referenced to CD: amplitude decreases from spring to neap around day 7 and returns to spring by day 14; spring tidal range is about 3.5 m.
       </figcaption>
     </figure>
 

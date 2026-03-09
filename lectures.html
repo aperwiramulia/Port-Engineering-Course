@@ -492,6 +492,87 @@ Required Channel/Harbor Depth
   = Vessel Draft + UKC + Squat + Motion Allowance + Safety Margin
     </pre>
 
+    <h3>Water Level Figures (Datum Reference at Quay)</h3>
+    <p>
+      The figures below help students visualize how different design water levels are measured from the same reference datum.
+      In this example, <strong>Chart Datum (CD)</strong> is used as the vertical reference.
+    </p>
+
+    <figure style="margin: 18px 0;">
+      <svg viewBox="0 0 960 420" width="100%" role="img" aria-label="Quay cross-section with datum-referenced water levels">
+        <rect x="0" y="0" width="960" height="420" fill="#f7fbff"></rect>
+        <rect x="150" y="50" width="120" height="300" fill="#d6d6d6"></rect>
+        <rect x="270" y="70" width="580" height="45" fill="#8d8d8d"></rect>
+        <text x="330" y="98" font-size="22" fill="#ffffff">Quay Deck</text>
+
+        <line x1="290" y1="150" x2="900" y2="150" stroke="#d62728" stroke-width="3" stroke-dasharray="10,7"></line>
+        <text x="705" y="142" font-size="20" fill="#d62728">DHWL</text>
+
+        <line x1="290" y1="185" x2="900" y2="185" stroke="#ff7f0e" stroke-width="3" stroke-dasharray="10,7"></line>
+        <text x="725" y="177" font-size="20" fill="#ff7f0e">HAT</text>
+
+        <line x1="290" y1="230" x2="900" y2="230" stroke="#1f77b4" stroke-width="3"></line>
+        <text x="725" y="222" font-size="20" fill="#1f77b4">MSL</text>
+
+        <line x1="290" y1="280" x2="900" y2="280" stroke="#2ca02c" stroke-width="3" stroke-dasharray="8,6"></line>
+        <text x="730" y="272" font-size="20" fill="#2ca02c">LAT</text>
+
+        <line x1="290" y1="320" x2="900" y2="320" stroke="#000000" stroke-width="3"></line>
+        <text x="670" y="312" font-size="20" fill="#000000">Chart Datum (CD)</text>
+
+        <line x1="620" y1="320" x2="620" y2="150" stroke="#333333" stroke-width="2"></line>
+        <polygon points="620,150 614,160 626,160" fill="#333333"></polygon>
+        <text x="632" y="242" font-size="19" fill="#333333">DHWL above CD</text>
+
+        <line x1="560" y1="320" x2="560" y2="280" stroke="#333333" stroke-width="2"></line>
+        <polygon points="560,280 554,290 566,290" fill="#333333"></polygon>
+        <text x="400" y="305" font-size="18" fill="#333333">LAT above CD</text>
+      </svg>
+      <figcaption>
+        <strong>Figure 1.</strong> Quay elevation context: key water levels are compared against one vertical datum (CD).
+      </figcaption>
+    </figure>
+
+    <figure style="margin: 18px 0;">
+      <svg viewBox="0 0 960 360" width="100%" role="img" aria-label="Tidal water level variation with datum and operational bands">
+        <rect x="0" y="0" width="960" height="360" fill="#fcfcfc"></rect>
+        <line x1="110" y1="40" x2="110" y2="300" stroke="#222222" stroke-width="2"></line>
+        <line x1="110" y1="300" x2="900" y2="300" stroke="#222222" stroke-width="2"></line>
+        <text x="780" y="332" font-size="18" fill="#222222">Time</text>
+        <text x="18" y="34" font-size="18" fill="#222222">Water Level</text>
+
+        <line x1="110" y1="230" x2="900" y2="230" stroke="#1f77b4" stroke-width="2"></line>
+        <text x="915" y="235" font-size="16" fill="#1f77b4">MSL</text>
+
+        <line x1="110" y1="130" x2="900" y2="130" stroke="#ff7f0e" stroke-width="2" stroke-dasharray="7,5"></line>
+        <text x="915" y="135" font-size="16" fill="#ff7f0e">HAT</text>
+
+        <line x1="110" y1="270" x2="900" y2="270" stroke="#2ca02c" stroke-width="2" stroke-dasharray="7,5"></line>
+        <text x="915" y="275" font-size="16" fill="#2ca02c">LAT</text>
+
+        <line x1="110" y1="300" x2="900" y2="300" stroke="#000000" stroke-width="2"></line>
+        <text x="915" y="305" font-size="16" fill="#000000">CD</text>
+
+        <path d="M130,230 C180,130 250,130 300,230 C350,330 420,330 470,230 C520,130 590,130 640,230 C690,330 760,330 810,230"
+              fill="none" stroke="#0066cc" stroke-width="4"></path>
+
+        <rect x="145" y="90" width="180" height="30" fill="#ffe8cc" stroke="#ff7f0e"></rect>
+        <text x="157" y="112" font-size="16" fill="#8a4b00">High Water Window</text>
+
+        <rect x="665" y="276" width="165" height="22" fill="#dcf7e3" stroke="#2ca02c"></rect>
+        <text x="676" y="292" font-size="15" fill="#1c6f37">Low Water Limit</text>
+      </svg>
+      <figcaption>
+        <strong>Figure 2.</strong> Tidal cycle interpretation: the same datum allows clear comparison of MSL, HAT, LAT, and operational windows.
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li><strong>Freeboard check:</strong> Quay deck elevation should remain safely above design high-water conditions.</li>
+      <li><strong>Depth check:</strong> Navigation and berthing depth must satisfy draft plus allowances at low-water conditions.</li>
+      <li><strong>Consistency rule:</strong> All elevations in design drawings and calculations must reference the same datum.</li>
+    </ul>
+
     <h4>B. Wave Conditions and Harbor Exposure</h4>
     <ul>
       <li><strong>Offshore wave climate:</strong> usually represented by significant wave height (Hs), peak period (Tp), and direction.</li>

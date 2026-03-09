@@ -499,37 +499,59 @@ Required Channel/Harbor Depth
     </p>
 
     <figure style="margin: 18px 0;">
-      <svg viewBox="0 0 960 420" width="100%" role="img" aria-label="Quay cross-section with datum-referenced water levels">
-        <rect x="0" y="0" width="960" height="420" fill="#f7fbff"></rect>
-        <rect x="150" y="50" width="120" height="300" fill="#d6d6d6"></rect>
-        <rect x="270" y="70" width="580" height="45" fill="#8d8d8d"></rect>
-        <text x="330" y="98" font-size="22" fill="#ffffff">Quay Deck</text>
+      <svg viewBox="0 0 960 450" width="100%" role="img" aria-label="Professional quay cross-section with datum-referenced water levels and freeboard annotation">
+        <defs>
+          <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#cfeaff"></stop>
+            <stop offset="100%" stop-color="#8fc5ee"></stop>
+          </linearGradient>
+          <marker id="arrowHead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#2f2f2f"></path>
+          </marker>
+        </defs>
 
-        <line x1="290" y1="150" x2="900" y2="150" stroke="#d62728" stroke-width="3" stroke-dasharray="10,7"></line>
-        <text x="705" y="142" font-size="20" fill="#d62728">DHWL</text>
+        <rect x="0" y="0" width="960" height="450" fill="#f5f8fc"></rect>
+        <rect x="120" y="85" width="745" height="280" rx="8" fill="#ffffff" stroke="#d3dbe5" stroke-width="2"></rect>
 
-        <line x1="290" y1="185" x2="900" y2="185" stroke="#ff7f0e" stroke-width="3" stroke-dasharray="10,7"></line>
-        <text x="725" y="177" font-size="20" fill="#ff7f0e">HAT</text>
+        <rect x="270" y="155" width="595" height="175" fill="url(#seaGrad)"></rect>
 
-        <line x1="290" y1="230" x2="900" y2="230" stroke="#1f77b4" stroke-width="3"></line>
-        <text x="725" y="222" font-size="20" fill="#1f77b4">MSL</text>
+        <rect x="140" y="95" width="130" height="265" fill="#c4c9cf"></rect>
+        <rect x="270" y="110" width="595" height="45" fill="#707983"></rect>
+        <text x="305" y="140" font-size="22" fill="#ffffff" font-weight="600">Quay Deck Elevation</text>
 
-        <line x1="290" y1="280" x2="900" y2="280" stroke="#2ca02c" stroke-width="3" stroke-dasharray="8,6"></line>
-        <text x="730" y="272" font-size="20" fill="#2ca02c">LAT</text>
+        <line x1="290" y1="165" x2="845" y2="165" stroke="#d62828" stroke-width="3" stroke-dasharray="10,6"></line>
+        <text x="855" y="170" font-size="18" fill="#d62828" font-weight="600">DHWL</text>
 
-        <line x1="290" y1="320" x2="900" y2="320" stroke="#000000" stroke-width="3"></line>
-        <text x="670" y="312" font-size="20" fill="#000000">Chart Datum (CD)</text>
+        <line x1="290" y1="200" x2="845" y2="200" stroke="#fb8500" stroke-width="3" stroke-dasharray="10,6"></line>
+        <text x="855" y="205" font-size="18" fill="#fb8500" font-weight="600">HAT</text>
 
-        <line x1="620" y1="320" x2="620" y2="150" stroke="#333333" stroke-width="2"></line>
-        <polygon points="620,150 614,160 626,160" fill="#333333"></polygon>
-        <text x="632" y="242" font-size="19" fill="#333333">DHWL above CD</text>
+        <line x1="290" y1="245" x2="845" y2="245" stroke="#1d4ed8" stroke-width="3"></line>
+        <text x="855" y="250" font-size="18" fill="#1d4ed8" font-weight="600">MSL</text>
 
-        <line x1="560" y1="320" x2="560" y2="280" stroke="#333333" stroke-width="2"></line>
-        <polygon points="560,280 554,290 566,290" fill="#333333"></polygon>
-        <text x="400" y="305" font-size="18" fill="#333333">LAT above CD</text>
+        <line x1="290" y1="292" x2="845" y2="292" stroke="#2a9d8f" stroke-width="3" stroke-dasharray="8,5"></line>
+        <text x="855" y="297" font-size="18" fill="#2a9d8f" font-weight="600">LAT</text>
+
+        <line x1="290" y1="330" x2="845" y2="330" stroke="#111111" stroke-width="3"></line>
+        <text x="855" y="335" font-size="18" fill="#111111" font-weight="600">CD</text>
+
+        <line x1="640" y1="330" x2="640" y2="165" stroke="#2f2f2f" stroke-width="2" marker-start="url(#arrowHead)" marker-end="url(#arrowHead)"></line>
+        <rect x="650" y="232" width="138" height="28" rx="4" fill="#ffffff" stroke="#cfd6df"></rect>
+        <text x="659" y="251" font-size="16" fill="#1f2937" font-weight="600">DHWL above CD</text>
+
+        <line x1="605" y1="330" x2="605" y2="292" stroke="#2f2f2f" stroke-width="2" marker-start="url(#arrowHead)" marker-end="url(#arrowHead)"></line>
+        <rect x="456" y="340" width="138" height="26" rx="4" fill="#ffffff" stroke="#cfd6df"></rect>
+        <text x="466" y="358" font-size="15" fill="#1f2937" font-weight="600">LAT above CD</text>
+
+        <line x1="555" y1="165" x2="555" y2="110" stroke="#2f2f2f" stroke-width="2" marker-start="url(#arrowHead)" marker-end="url(#arrowHead)"></line>
+        <rect x="390" y="72" width="220" height="28" rx="4" fill="#fff7ed" stroke="#f59e0b"></rect>
+        <text x="401" y="91" font-size="16" fill="#9a3412" font-weight="700">Freeboard = Deck Elev. - DHWL</text>
+
+        <rect x="140" y="372" width="325" height="55" rx="6" fill="#f9fbff" stroke="#d3dbe5"></rect>
+        <text x="152" y="394" font-size="15" fill="#334155" font-weight="600">Reference Datum: Chart Datum (CD)</text>
+        <text x="152" y="414" font-size="14" fill="#475569">All vertical elevations are measured from CD.</text>
       </svg>
       <figcaption>
-        <strong>Figure 1.</strong> Quay elevation context: key water levels are compared against one vertical datum (CD).
+        <strong>Figure 1.</strong> Professional quay-level schematic: DHWL, HAT, MSL, LAT, and CD with explicit freeboard height.
       </figcaption>
     </figure>
 

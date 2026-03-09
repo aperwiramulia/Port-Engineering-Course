@@ -445,13 +445,123 @@ River discharge ↓ (estuary ports) → suspended sediment plume → basin silta
   </div>
 </details>
 
-<h3>Lecture 3 – Design Water Levels and Wave Conditions</h3>
-<ul>
-<li>Tidal analysis</li>
-<li>Storm surge</li>
-<li>Wave transformation</li>
-<li>Design return periods</li>
-</ul>
+<details class="lecture">
+  <summary class="lecture-title">
+  Lecture 3 - Design Water Levels and Wave Conditions
+</summary>
+
+  <div class="lecture-content">
+
+    <h3>Learning Objectives</h3>
+    <ul>
+      <li>Define and differentiate key water level terms used in port design.</li>
+      <li>Estimate design water levels by combining tide, surge, wave, and long-term change components.</li>
+      <li>Explain wave generation and nearshore wave transformation processes relevant to harbor safety.</li>
+      <li>Select design return periods and interpret risk-based design decisions for different structures.</li>
+    </ul>
+
+    <h3>Key Topics</h3>
+    <ol>
+      <li>Datum and water level terminology (LAT, MSL, HAT)</li>
+      <li>Astronomical tides and tide prediction basics</li>
+      <li>Meteorological effects: storm surge and pressure/wind setup</li>
+      <li>Wave climate parameters (Hs, Tp, direction)</li>
+      <li>Wave transformation: shoaling, refraction, diffraction, breaking</li>
+      <li>Design return periods and reliability levels</li>
+      <li>Indonesian coastal and archipelagic design considerations</li>
+    </ol>
+
+    <h3>Lecture Overview</h3>
+
+    <h4>A. Design Water Levels</h4>
+    <p>
+      Ports must be designed for both high-water and low-water operational conditions. High-water conditions control
+      overtopping and crest elevations, while low-water conditions control navigation depth, under-keel clearance,
+      and berth accessibility.
+    </p>
+
+    <p><strong>Conceptual extreme high-water expression:</strong></p>
+    <pre>
+Design High Water Level (DHWL)
+  = Astronomical Tide + Storm Surge + Wave Setup + Sea Level Rise Allowance
+    </pre>
+
+    <p><strong>Conceptual design depth expression:</strong></p>
+    <pre>
+Required Channel/Harbor Depth
+  = Vessel Draft + UKC + Squat + Motion Allowance + Safety Margin
+    </pre>
+
+    <h4>B. Wave Conditions and Harbor Exposure</h4>
+    <ul>
+      <li><strong>Offshore wave climate:</strong> usually represented by significant wave height (Hs), peak period (Tp), and direction.</li>
+      <li><strong>Nearshore transformation:</strong> waves change as they approach the coast due to depth and geometry effects.</li>
+      <li><strong>Operational impact:</strong> excessive agitation in the basin can reduce crane productivity and mooring safety.</li>
+    </ul>
+
+    <h3>Wave Transformation Chain (Concept)</h3>
+    <pre>
+Offshore Waves
+   -> Shoaling (height/length changes with depth)
+   -> Refraction (direction changes due to bathymetry)
+   -> Diffraction (energy spreads around breakwater heads)
+   -> Breaking / Dissipation
+   -> Residual Agitation in Harbor Basin
+    </pre>
+
+    <h3>Return Period and Risk Logic</h3>
+    <p>
+      Design conditions are linked to target reliability. More critical structures use rarer events (longer return periods),
+      while lower-consequence assets may use shorter return periods to balance CAPEX and residual risk.
+    </p>
+
+    <table style="border-collapse: collapse; width: 100%;" border="1">
+      <tr>
+        <th>Component</th>
+        <th>Typical Return Period Range</th>
+        <th>Main Design Concern</th>
+      </tr>
+      <tr>
+        <td>Breakwater crest and armor</td>
+        <td>50-100 years (or project-specific)</td>
+        <td>Overtopping, structural stability, service continuity</td>
+      </tr>
+      <tr>
+        <td>Quay deck elevation</td>
+        <td>25-100 years (depends on consequence)</td>
+        <td>Flooding risk, operability during high water</td>
+      </tr>
+      <tr>
+        <td>Channel and basin depth</td>
+        <td>Operational low-water criteria</td>
+        <td>Under-keel clearance, navigation safety</td>
+      </tr>
+    </table>
+
+    <h3>Indonesian Context Notes</h3>
+    <ul>
+      <li>Monsoonal seasonality can shift dominant wave directions and operational windows.</li>
+      <li>Estuarine ports must account for combined river discharge and tide interactions.</li>
+      <li>High sedimentation rates can reduce effective depth and alter local wave conditions over time.</li>
+      <li>Climate adaptation should be embedded in design allowances for long-life infrastructure.</li>
+    </ul>
+
+    <h3>Discussion Questions</h3>
+    <ol>
+      <li>Which water level component is most uncertain at your case-study port, and why?</li>
+      <li>How does wave diffraction at an entrance affect berth operability inside the basin?</li>
+      <li>What trade-offs emerge when selecting a 25-year versus 100-year design condition?</li>
+    </ol>
+
+    <h3>Further Reading and Resources</h3>
+    <ul>
+      <li><a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" target="_blank" rel="noopener">USACE Coastal Engineering Manual (CEM)</a></li>
+      <li><a href="https://www.pianc.org" target="_blank" rel="noopener">PIANC guidance on port and maritime infrastructure</a></li>
+      <li><a href="https://www.bmkg.go.id" target="_blank" rel="noopener">BMKG maritime and coastal metocean information (Indonesia)</a></li>
+    </ul>
+
+  </div>
+</details>
 
 <hr>
 
@@ -488,7 +598,7 @@ River discharge ↓ (estuary ports) → suspended sediment plume → basin silta
   "facts": [
     "Lecture 1 explains port roles, terminal types, and engineering constraints.",
     "Lecture 2 focuses on port layout, coastal interaction, and sedimentation impacts.",
-    "Lecture 3 to 5 continue with water levels, wave conditions, breakwater design, and quay structures."
+    "Lecture 3 develops design water level and wave-condition concepts for risk-based port design."
   ],
   "quickAnswers": [
     {
@@ -498,6 +608,10 @@ River discharge ↓ (estuary ports) → suspended sediment plume → basin silta
     {
       "keywords": ["lecture 2", "layout", "coastal", "sedimentation", "dredging"],
       "answer": "Lecture 2 emphasizes conceptual layout decisions, wave/tide/sediment interaction, and long-term dredging OPEX implications."
+    },
+    {
+      "keywords": ["lecture 3", "water levels", "wave conditions", "storm surge", "return period"],
+      "answer": "Lecture 3 covers design water levels, wave transformation, and return-period selection for reliable port infrastructure decisions."
     },
     {
       "keywords": ["study", "prepare", "revision", "exam"],

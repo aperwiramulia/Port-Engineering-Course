@@ -556,36 +556,56 @@ Required Channel/Harbor Depth
     </figure>
 
     <figure style="margin: 18px 0;">
-      <svg viewBox="0 0 960 360" width="100%" role="img" aria-label="Tidal water level variation with datum and operational bands">
-        <rect x="0" y="0" width="960" height="360" fill="#fcfcfc"></rect>
-        <line x1="110" y1="40" x2="110" y2="300" stroke="#222222" stroke-width="2"></line>
-        <line x1="110" y1="300" x2="900" y2="300" stroke="#222222" stroke-width="2"></line>
-        <text x="780" y="332" font-size="18" fill="#222222">Time</text>
-        <text x="18" y="34" font-size="18" fill="#222222">Water Level</text>
+      <svg viewBox="0 0 960 390" width="100%" role="img" aria-label="Comparison of spring and neap tides referenced to chart datum with spring range about 3.5 meters">
+        <defs>
+          <marker id="rangeArrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="#2f2f2f"></path>
+          </marker>
+        </defs>
 
-        <line x1="110" y1="230" x2="900" y2="230" stroke="#1f77b4" stroke-width="2"></line>
-        <text x="915" y="235" font-size="16" fill="#1f77b4">MSL</text>
+        <rect x="0" y="0" width="960" height="390" fill="#f8fafc"></rect>
+        <rect x="90" y="38" width="830" height="290" rx="8" fill="#ffffff" stroke="#d7dee8" stroke-width="2"></rect>
 
-        <line x1="110" y1="130" x2="900" y2="130" stroke="#ff7f0e" stroke-width="2" stroke-dasharray="7,5"></line>
-        <text x="915" y="135" font-size="16" fill="#ff7f0e">HAT</text>
+        <line x1="130" y1="65" x2="130" y2="300" stroke="#1f2937" stroke-width="2"></line>
+        <line x1="130" y1="300" x2="890" y2="300" stroke="#1f2937" stroke-width="2"></line>
+        <text x="816" y="328" font-size="16" fill="#1f2937">Time (days)</text>
+        <text x="18" y="58" font-size="16" fill="#1f2937">Level vs CD (m)</text>
 
-        <line x1="110" y1="270" x2="900" y2="270" stroke="#2ca02c" stroke-width="2" stroke-dasharray="7,5"></line>
-        <text x="915" y="275" font-size="16" fill="#2ca02c">LAT</text>
+        <line x1="130" y1="180" x2="890" y2="180" stroke="#2563eb" stroke-width="2"></line>
+        <text x="896" y="185" font-size="15" fill="#2563eb">MSL</text>
 
-        <line x1="110" y1="300" x2="900" y2="300" stroke="#000000" stroke-width="2"></line>
-        <text x="915" y="305" font-size="16" fill="#000000">CD</text>
+        <line x1="130" y1="106" x2="890" y2="106" stroke="#dc2626" stroke-width="2" stroke-dasharray="7,5"></line>
+        <text x="896" y="111" font-size="15" fill="#dc2626">+1.75 m (Spring HW)</text>
 
-        <path d="M130,230 C180,130 250,130 300,230 C350,330 420,330 470,230 C520,130 590,130 640,230 C690,330 760,330 810,230"
-              fill="none" stroke="#0066cc" stroke-width="4"></path>
+        <line x1="130" y1="254" x2="890" y2="254" stroke="#059669" stroke-width="2" stroke-dasharray="7,5"></line>
+        <text x="896" y="259" font-size="15" fill="#059669">-1.75 m (Spring LW)</text>
 
-        <rect x="145" y="90" width="180" height="30" fill="#ffe8cc" stroke="#ff7f0e"></rect>
-        <text x="157" y="112" font-size="16" fill="#8a4b00">High Water Window</text>
+        <line x1="130" y1="142" x2="890" y2="142" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,6"></line>
+        <text x="896" y="147" font-size="15" fill="#b45309">+0.9 m (Neap HW)</text>
 
-        <rect x="665" y="276" width="165" height="22" fill="#dcf7e3" stroke="#2ca02c"></rect>
-        <text x="676" y="292" font-size="15" fill="#1c6f37">Low Water Limit</text>
+        <line x1="130" y1="218" x2="890" y2="218" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="6,6"></line>
+        <text x="896" y="223" font-size="15" fill="#0369a1">-0.9 m (Neap LW)</text>
+
+        <path d="M145,180 C190,106 245,106 290,180 C335,254 390,254 435,180 C480,106 535,106 580,180 C625,254 680,254 725,180 C770,106 825,106 870,180"
+              fill="none" stroke="#dc2626" stroke-width="3.5"></path>
+        <path d="M145,180 C190,142 245,142 290,180 C335,218 390,218 435,180 C480,142 535,142 580,180 C625,218 680,218 725,180 C770,142 825,142 870,180"
+              fill="none" stroke="#0f766e" stroke-width="3"></path>
+
+        <line x1="742" y1="106" x2="742" y2="254" stroke="#2f2f2f" stroke-width="2" marker-start="url(#rangeArrow)" marker-end="url(#rangeArrow)"></line>
+        <rect x="752" y="166" width="148" height="30" rx="4" fill="#fff7ed" stroke="#f59e0b"></rect>
+        <text x="760" y="186" font-size="16" fill="#9a3412" font-weight="700">Spring Range ~ 3.5 m</text>
+
+        <rect x="155" y="74" width="168" height="28" rx="4" fill="#fee2e2" stroke="#dc2626"></rect>
+        <text x="166" y="93" font-size="15" fill="#991b1b" font-weight="700">Spring Tide Curve</text>
+
+        <rect x="155" y="106" width="160" height="28" rx="4" fill="#ccfbf1" stroke="#0f766e"></rect>
+        <text x="166" y="125" font-size="15" fill="#134e4a" font-weight="700">Neap Tide Curve</text>
+
+        <line x1="130" y1="300" x2="890" y2="300" stroke="#111111" stroke-width="1.5"></line>
+        <text x="896" y="305" font-size="15" fill="#111111">Chart Datum (CD)</text>
       </svg>
       <figcaption>
-        <strong>Figure 2.</strong> Tidal cycle interpretation: the same datum allows clear comparison of MSL, HAT, LAT, and operational windows.
+        <strong>Figure 2.</strong> Spring-neap comparison referenced to CD: spring tidal range is illustrated at about 3.5 m, while neap tide has a smaller range.
       </figcaption>
     </figure>
 

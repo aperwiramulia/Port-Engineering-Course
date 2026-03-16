@@ -80,6 +80,46 @@ summary h2{display:inline;margin:0}
 
 .lecture .lecture-title{font-size:1.25rem;font-weight:700}
 
+.lecture-summary{
+  margin:14px 0 18px;
+  padding:14px 16px;
+  border:1px solid #dbe9ff;
+  border-left:6px solid #1d4ed8;
+  border-radius:10px;
+  background:linear-gradient(180deg,#f8fbff 0%,#eef5ff 100%);
+}
+
+.lecture-summary h4{
+  margin:0 0 8px;
+  color:#1e3a8a;
+}
+
+.lecture-summary p{
+  margin:8px 0;
+}
+
+.lecture-quiz{
+  margin:18px 0;
+  padding:16px;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  background:#fbfdff;
+}
+
+.lecture-quiz h4{
+  margin-top:0;
+}
+
+.lecture-quiz ol{
+  margin-bottom:12px;
+}
+
+.lecture-quiz details{
+  margin:8px 0 0;
+  padding:10px 12px;
+  background:#ffffff;
+}
+
 @media (max-width:720px){
   .site-brand{flex-direction:column;align-items:flex-start}
   nav .nav-inner{flex-wrap:wrap}

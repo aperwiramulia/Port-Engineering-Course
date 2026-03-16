@@ -445,7 +445,7 @@ River discharge ↓ (estuary ports) → suspended sediment plume → basin silta
   </div>
 </details>
 
-<details class="lecture" open>
+<details class="lecture">
   <summary class="lecture-title">
   Lecture 3 - Design Water Levels and Wave Conditions
 </summary>
@@ -990,13 +990,165 @@ Offshore Waves
 
 <hr>
 
-<h3>Lecture 4 – Breakwater Design</h3>
-<ul>
-<li>Types of breakwaters</li>
-<li>Hudson formula</li>
-<li>Stability analysis</li>
-<li>Muddy seabed considerations</li>
-</ul>
+<details class="lecture" open>
+  <summary class="lecture-title">
+  Lecture 4 - Breakwater Design
+</summary>
+
+  <div class="lecture-content">
+
+    <h3>Learning Objectives</h3>
+    <ul>
+      <li>Differentiate major breakwater types and their suitable site conditions.</li>
+      <li>Apply Hudson-formula logic for preliminary armor sizing.</li>
+      <li>Identify key stability checks: armor, overtopping, toe stability, and foundation response.</li>
+      <li>Explain why muddy seabed ports need special geotechnical treatment and staged construction.</li>
+    </ul>
+
+    <h3>Key Topics</h3>
+    <ol>
+      <li>Breakwater functions in port safety and operability</li>
+      <li>Typology: rubble mound, vertical/caisson, and composite systems</li>
+      <li>Armor sizing concept with Hudson formula</li>
+      <li>Cross-section components: core, filter, underlayer, armor, and toe berm</li>
+      <li>Overtopping and crest-elevation decisions</li>
+      <li>Muddy seabed constraints: settlement, bearing, and construction sequence</li>
+      <li>Risk-based design and lifecycle maintenance strategy</li>
+    </ol>
+
+    <h3>Lecture Overview</h3>
+
+    <section class="lecture-summary" aria-label="Lecture 4 quick summary">
+      <div class="lecture-summary-head">
+        <h4>Lecture 4 At a Glance</h4>
+        <span class="lecture-summary-tag">Wave Protection</span>
+      </div>
+      <p>
+        Breakwater design balances <strong>wave attenuation</strong>, <strong>structural stability</strong>, and
+        <strong>constructability</strong> under local metocean and geotechnical constraints.
+      </p>
+      <div class="lecture-summary-grid">
+        <article class="lecture-summary-card">
+          <h5>Hydraulic Side</h5>
+          <p>Limit transmitted wave and overtopping so basin tranquility and quay operability targets are achieved.</p>
+          <code>Input: Hs, Tp, direction, water level, bathymetry</code>
+        </article>
+        <article class="lecture-summary-card">
+          <h5>Structural Side</h5>
+          <p>Ensure armor and toe remain stable and settlement stays within serviceability limits.</p>
+          <code>Check: armor weight, slope, toe, foundation, maintenance</code>
+        </article>
+      </div>
+      <p class="lecture-summary-focus">
+        Quick focus: hydraulic adequacy without geotechnical reliability is not a safe design.
+      </p>
+    </section>
+
+    <h4>A. Breakwater Types and Selection Logic</h4>
+    <ul>
+      <li><strong>Rubble mound:</strong> adaptable and robust; common where rock supply is available and seabed allows wide footprint.</li>
+      <li><strong>Vertical / caisson:</strong> smaller footprint and often efficient in deeper water, but requires stronger foundation and higher precision construction.</li>
+      <li><strong>Composite:</strong> combines mound foundation with vertical superstructure to balance footprint and stability.</li>
+    </ul>
+
+    <p><strong>Typical selection drivers:</strong> wave climate severity, water depth, available materials, construction fleet, seabed condition, and lifecycle OPEX.</p>
+
+    <h4>B. Rubble Mound Anatomy (Concept)</h4>
+    <pre>
+Seaside
+  ~ Wave attack ~
+      Armor Layer (primary protection)
+      Underlayer
+      Filter Layer
+      Core Material
+------------------------------ Crest
+                Landward Slope
+            Toe Berm (anti-scour / anti-sliding)
+Seabed
+    </pre>
+
+    <h4>C. Hudson Formula for Preliminary Armor Sizing</h4>
+    <p>
+      For early-stage sizing of armor units on rubble mound slopes, a common conceptual form is:
+    </p>
+    <pre>
+W = gamma_r * H^3 / (K_D * (S_r - 1)^3 * cot(theta))
+    </pre>
+    <ul>
+      <li><strong>W:</strong> required armor unit weight</li>
+      <li><strong>gamma_r:</strong> unit weight of armor rock/unit</li>
+      <li><strong>H:</strong> design wave height (project-specific definition)</li>
+      <li><strong>K_D:</strong> stability coefficient (depends on unit type, placement, and location)</li>
+      <li><strong>S_r:</strong> specific gravity ratio of armor material to water</li>
+      <li><strong>theta:</strong> slope angle relative to horizontal</li>
+    </ul>
+    <p>
+      Use this as a screening tool. Final design should be confirmed with detailed hydraulic and structural checks,
+      and where needed, physical/numerical model support.
+    </p>
+
+    <h4>D. Core Design Checks</h4>
+    <ol>
+      <li><strong>Armor stability:</strong> adequate weight and interlocking against displacement under design storms.</li>
+      <li><strong>Toe stability:</strong> prevent toe erosion and local failure that can trigger upper-slope instability.</li>
+      <li><strong>Overtopping:</strong> control discharge to protect hinterland safety and maintain operational continuity.</li>
+      <li><strong>Settlement and bearing:</strong> verify foundation response, especially on soft/muddy deposits.</li>
+      <li><strong>Constructability:</strong> staging, quarry/logistics, tolerances, and weather windows.</li>
+    </ol>
+
+    <h4>E. Muddy Seabed Considerations (Critical for Many Indonesian Sites)</h4>
+    <ul>
+      <li>Soft clay and high compressibility can cause long-term settlement and differential deformation.</li>
+      <li>Low undrained shear strength may reduce short-term bearing capacity during construction.</li>
+      <li>Potential mitigations include geotextile/geogrid reinforcement, preloading, vertical drains, berm widening, and staged loading.</li>
+      <li>Monitoring plan should track settlement, pore pressure, and deformation throughout construction and early operation.</li>
+    </ul>
+
+    <h3>Worked Screening Example (Class Discussion)</h3>
+    <p>
+      Given a preliminary design wave height increase from 2.0 m to 2.5 m, Hudson logic implies armor weight scales with H cubed.
+      Therefore weight ratio is (2.5/2.0)^3, approximately 1.95. In other words, a modest wave-height increase can nearly double
+      required armor weight, strongly affecting quarry demand, transport, and CAPEX.
+    </p>
+
+    <section class="lecture-quiz" aria-label="Lecture 4 in-class quiz">
+      <h4>In-Class Quiz (10-15 Minutes)</h4>
+      <p><strong>Instructions:</strong> Answer individually, then compare assumptions in pairs.</p>
+      <ol>
+        <li>What is one major advantage of rubble mound breakwaters compared with vertical structures?</li>
+        <li>In Hudson sizing, how does required armor weight change if design wave height doubles?</li>
+        <li>Name two checks besides armor weight that are essential for breakwater reliability.</li>
+        <li>Why are muddy seabed conditions especially important in breakwater projects?</li>
+        <li>Give one construction strategy to reduce risk on soft foundation soils.</li>
+      </ol>
+      <details>
+        <summary><strong>Answer Key (Open After Discussion)</strong></summary>
+        <ol>
+          <li>High adaptability and robustness, often with easier phased construction where rock is available.</li>
+          <li>It increases by a factor of 2 cubed = 8 (all else equal).</li>
+          <li>Any two of toe stability, overtopping performance, settlement/bearing, constructability, maintenance access.</li>
+          <li>Because low strength and high compressibility can cause instability and long-term deformation.</li>
+          <li>Any one valid method: staged loading, vertical drains, preloading, reinforcement, wider berm foundation.</li>
+        </ol>
+      </details>
+    </section>
+
+    <h3>Discussion Questions</h3>
+    <ol>
+      <li>When would a vertical/composite solution be preferable over rubble mound for a constrained port footprint?</li>
+      <li>How should climate-change sea-level and wave uncertainty affect crest elevation decisions?</li>
+      <li>Which lifecycle cost components are commonly underestimated in breakwater planning?</li>
+    </ol>
+
+    <h3>Further Reading and Resources</h3>
+    <ul>
+      <li><a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" target="_blank" rel="noopener">USACE Coastal Engineering Manual (CEM)</a></li>
+      <li><a href="https://www.pianc.org" target="_blank" rel="noopener">PIANC guidance on maritime structures and breakwaters</a></li>
+      <li><a href="https://www.youtube.com/results?search_query=breakwater+design+hudson+formula" target="_blank" rel="noopener">Educational videos: breakwater design and Hudson formula</a></li>
+    </ul>
+
+  </div>
+</details>
 
 <hr>
 
@@ -1023,7 +1175,8 @@ Offshore Waves
   "facts": [
     "Lecture 1 explains port roles, terminal types, and engineering constraints.",
     "Lecture 2 focuses on port layout, coastal interaction, and sedimentation impacts.",
-    "Lecture 3 develops design water level and wave-condition concepts for risk-based port design."
+    "Lecture 3 develops design water level and wave-condition concepts for risk-based port design.",
+    "Lecture 4 introduces breakwater typology, Hudson sizing logic, stability checks, and muddy seabed design concerns."
   ],
   "quickAnswers": [
     {
@@ -1037,6 +1190,10 @@ Offshore Waves
     {
       "keywords": ["lecture 3", "water levels", "wave conditions", "storm surge", "return period"],
       "answer": "Lecture 3 covers design water levels, wave transformation, and return-period selection for reliable port infrastructure decisions."
+    },
+    {
+      "keywords": ["lecture 4", "breakwater", "hudson", "armor", "muddy seabed"],
+      "answer": "Lecture 4 covers breakwater types, Hudson-based preliminary armor sizing, key stability checks, and design adaptations for soft muddy foundations."
     },
     {
       "keywords": ["study", "prepare", "revision", "exam"],

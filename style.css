@@ -81,21 +81,86 @@ summary h2{display:inline;margin:0}
 .lecture .lecture-title{font-size:1.25rem;font-weight:700}
 
 .lecture-summary{
-  margin:14px 0 18px;
-  padding:14px 16px;
-  border:1px solid #dbe9ff;
-  border-left:6px solid #1d4ed8;
+  margin:14px 0 20px;
+  padding:16px;
+  border:1px solid #cfe0ff;
   border-radius:10px;
-  background:linear-gradient(180deg,#f8fbff 0%,#eef5ff 100%);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(59,130,246,0.16), transparent 42%),
+    linear-gradient(180deg,#f8fbff 0%,#eaf2ff 100%);
+  box-shadow:0 10px 24px rgba(30,58,138,0.08);
 }
 
 .lecture-summary h4{
   margin:0 0 8px;
-  color:#1e3a8a;
+  color:#172554;
+  font-size:1.15rem;
 }
 
 .lecture-summary p{
   margin:8px 0;
+}
+
+.lecture-summary-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.lecture-summary-tag{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#1d4ed8;
+  color:#ffffff;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.3px;
+}
+
+.lecture-summary-grid{
+  margin-top:12px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.lecture-summary-card{
+  background:#ffffff;
+  border:1px solid #dbe7ff;
+  border-radius:10px;
+  padding:12px;
+}
+
+.lecture-summary-card h5{
+  margin:0 0 6px;
+  color:#1e3a8a;
+  font-size:0.96rem;
+}
+
+.lecture-summary-card p{
+  margin:0 0 8px;
+  font-size:0.93rem;
+}
+
+.lecture-summary-card code{
+  display:block;
+  padding:7px 8px;
+  border-radius:8px;
+  background:#eff6ff;
+  border:1px solid #dbeafe;
+  color:#1e3a8a;
+  font-size:0.83rem;
+}
+
+.lecture-summary-focus{
+  margin:12px 0 0;
+  padding:10px 12px;
+  border-left:4px solid #1d4ed8;
+  background:#ffffff;
+  border-radius:8px;
+  font-weight:600;
 }
 
 .lecture-quiz{
@@ -124,6 +189,15 @@ summary h2{display:inline;margin:0}
   .site-brand{flex-direction:column;align-items:flex-start}
   nav .nav-inner{flex-wrap:wrap}
   .container{margin:12px;padding:16px}
+
+  .lecture-summary-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .lecture-summary-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* small utility */

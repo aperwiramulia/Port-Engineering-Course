@@ -1490,11 +1490,152 @@ d = (6*1.10/pi)^(1/3) about 1.28 m
 <hr>
 
 <h3>Lecture 5 – Quay Walls and Berthing Structures</h3>
+<p>
+  This lecture builds a complete concept-level framework for selecting quay structures,
+  estimating berthing demand, and checking preliminary structural reliability.
+</p>
+
+<h4>A. Learning Outcomes</h4>
+<ol>
+  <li>Differentiate gravity walls, sheet pile walls, and pile-supported wharves.</li>
+  <li>Map key berth load categories and define a practical load path.</li>
+  <li>Estimate concept-level berthing energy and understand fender reaction implications.</li>
+  <li>List governing ULS and SLS checks for preliminary decision making.</li>
+</ol>
+
+<h4>B. Main Structural Options</h4>
+<h5>1) Gravity Walls</h5>
 <ul>
-<li>Gravity walls</li>
-<li>Sheet pile walls</li>
-<li>Pile-supported wharves</li>
-<li>Load analysis</li>
+  <li>Resist lateral demand mainly by self-weight (mass concrete, blockwork, caisson systems).</li>
+  <li>Best suited where foundation bearing capacity and settlement performance are adequate.</li>
+  <li>Core checks: sliding, overturning, bearing, and differential settlement.</li>
+</ul>
+
+<h5>2) Sheet Pile Walls</h5>
+<ul>
+  <li>Flexible retaining wall system with embedment and often anchors/tie-rods.</li>
+  <li>Often selected for construction speed and limited footprint behind the quay line.</li>
+  <li>Core checks: bending and shear capacity, wall deflection, anchor force, corrosion allowance.</li>
+</ul>
+
+<h5>3) Pile-Supported Wharves</h5>
+<ul>
+  <li>Deck system supported by vertical/raked piles with open waterfront geometry.</li>
+  <li>Often preferred for weak compressible soils and seismic-sensitive sites.</li>
+  <li>Core checks: pile axial/lateral capacity, connection detailing, and durability in splash/tidal zones.</li>
+</ul>
+
+<h4>C. Concept Selection Logic</h4>
+<ul>
+  <li><strong>Gravity wall:</strong> often favorable with strong foundations and constrained backland footprint.</li>
+  <li><strong>Sheet pile wall:</strong> often favorable for moderate retained heights and accelerated schedules.</li>
+  <li><strong>Pile-supported wharf:</strong> often favorable for soft ground, high settlement risk, or seismic demand.</li>
+</ul>
+<p>
+  Final concept selection should combine geotechnical evidence, constructability, lifecycle cost,
+  and expected terminal operations.
+</p>
+
+<h4>D. Load Analysis Framework</h4>
+<ol>
+  <li><strong>Permanent loads:</strong> self-weight, pavement, utilities, fixed equipment.</li>
+  <li><strong>Operational variable loads:</strong> cargo, truck traffic, crane wheel actions.</li>
+  <li><strong>Earth and hydrostatic actions:</strong> retained soil and water pressures where relevant.</li>
+  <li><strong>Berthing loads:</strong> vessel impact energy transferred through fender systems.</li>
+  <li><strong>Mooring loads:</strong> line forces from wind, current, and wave drift demand.</li>
+  <li><strong>Environmental extremes:</strong> wave, current, seismic actions as site-specific requirements.</li>
+</ol>
+
+<h4>E. Berthing Energy and Fender Basics</h4>
+<p>
+  A common concept form for berthing energy is:
+</p>
+<pre>
+E = 0.5 * M * V^2 * C_M * C_E * C_S * C_C
+</pre>
+<ul>
+  <li><strong>M:</strong> vessel berthing mass (design displacement basis)</li>
+  <li><strong>V:</strong> approach velocity normal to berth</li>
+  <li><strong>C_M, C_E, C_S, C_C:</strong> project-specific correction coefficients</li>
+</ul>
+<p>
+  Design principle: fender selection must satisfy both energy absorption and acceptable reaction transfer
+  into the berth structure.
+</p>
+
+<h5>Worked Concept Example</h5>
+<p>
+  Assume <strong>M = 6.0e7 kg</strong>, <strong>V = 0.15 m/s</strong>,
+  <strong>C_M = 1.10</strong>, <strong>C_E = 0.90</strong>, and other coefficients = 1.0.
+</p>
+<pre>
+E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
+  = about 6.68e5 J
+  = about 668 kJ
+</pre>
+<p>
+  With concept-stage margin, required fender energy class may be around 1000 kJ.
+  The corresponding fender reaction must then be checked against wall/deck/pile capacity.
+</p>
+
+<h4>F. Preliminary ULS and SLS Checks</h4>
+<h5>ULS focus</h5>
+<ul>
+  <li>Global stability (sliding, overturning, bearing) for gravity-type systems.</li>
+  <li>Flexure/shear and anchor capacity for sheet pile systems.</li>
+  <li>Pile axial/lateral performance and local deck-frontage resistance for pile-supported systems.</li>
+</ul>
+
+<h5>SLS focus</h5>
+<ul>
+  <li>Wall movement/rotation limits and deck deflection control.</li>
+  <li>Crack width and long-term durability performance.</li>
+  <li>Operational tolerances for cranes, bollards, and fender alignment.</li>
+</ul>
+
+<h4>G. Common Design Risks</h4>
+<ul>
+  <li>Underestimating approach velocity and berthing eccentricity.</li>
+  <li>Ignoring mooring load combinations in serviceability checks.</li>
+  <li>Insufficient corrosion/durability allowance for marine exposure zones.</li>
+  <li>Weak load-path detailing at fender and bollard anchorage locations.</li>
+</ul>
+
+<section class="lecture-quiz" aria-label="Lecture 5 in-class quiz">
+  <h4>In-Class Quiz (10-15 Minutes)</h4>
+  <p><strong>Instructions:</strong> Answer individually, then discuss in pairs.</p>
+  <ol>
+    <li>Which site condition most strongly favors pile-supported wharf concepts?</li>
+    <li>Why is berthing design not an energy-only check?</li>
+    <li>Name one ULS and one SLS check for sheet pile walls.</li>
+    <li>How does approach velocity uncertainty influence berthing demand?</li>
+    <li>Give one lifecycle cost item commonly underestimated in berth planning.</li>
+  </ol>
+  <details>
+    <summary><strong>Answer Key (Open After Discussion)</strong></summary>
+    <ol>
+      <li>Very soft/compressible soils (and often seismic sensitivity) commonly favor pile-supported wharf concepts.</li>
+      <li>Because fender reaction transfer into structural elements can govern even when energy capacity passes.</li>
+      <li>Example ULS: bending and anchor capacity; example SLS: wall deflection or crack/serviceability limit.</li>
+      <li>Berthing energy scales with velocity squared, so small velocity increases can significantly raise demand.</li>
+      <li>Any valid item such as maintenance downtime, corrosion rehabilitation, or fender replacement logistics.</li>
+    </ol>
+  </details>
+</section>
+
+<h3>Discussion Questions</h3>
+<ol>
+  <li>When can gravity walls still be viable on weak upper soils if stronger strata exist at depth?</li>
+  <li>How should future vessel upscaling uncertainty influence current fender class selection?</li>
+  <li>Which berth performance indicators should be used to evaluate lifecycle value beyond CAPEX?</li>
+</ol>
+
+<h3>Further Reading and Resources</h3>
+<ul>
+  <li><a href="https://www.pianc.org" target="_blank" rel="noopener">PIANC technical guidance for maritime structures and berthing systems</a></li>
+  <li><a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" target="_blank" rel="noopener">USACE Coastal Engineering Manual (CEM)</a></li>
+  <li><a href="https://www.fpianc.org/publications" target="_blank" rel="noopener">PIANC reports on fender systems and harbor approach conditions</a></li>
+  <li><a href="lecture5_slides.md" target="_blank" rel="noopener">Lecture 5 PPT-ready slide script (Markdown)</a></li>
 </ul>
 
 
@@ -1513,7 +1654,8 @@ d = (6*1.10/pi)^(1/3) about 1.28 m
     "Lecture 1 explains port roles, terminal types, and engineering constraints.",
     "Lecture 2 focuses on port layout, coastal interaction, and sedimentation impacts.",
     "Lecture 3 develops design water level and wave-condition concepts for risk-based port design.",
-    "Lecture 4 introduces breakwater typology, Hudson sizing logic, stability checks, and muddy seabed design concerns."
+    "Lecture 4 introduces breakwater typology, Hudson sizing logic, stability checks, and muddy seabed design concerns.",
+    "Lecture 5 covers quay wall typologies, berthing-load framework, fender energy and reaction logic, and preliminary ULS/SLS checks for berth reliability."
   ],
   "quickAnswers": [
     {
@@ -1531,6 +1673,10 @@ d = (6*1.10/pi)^(1/3) about 1.28 m
     {
       "keywords": ["lecture 4", "breakwater", "hudson", "armor", "muddy seabed"],
       "answer": "Lecture 4 covers breakwater types, Hudson-based preliminary armor sizing, key stability checks, and design adaptations for soft muddy foundations."
+    },
+    {
+      "keywords": ["lecture 5", "quay wall", "berthing", "fender", "pile-supported wharf"],
+      "answer": "Lecture 5 covers gravity/sheet-pile/pile-supported berth concepts, load categories, berthing energy and fender reaction logic, plus preliminary ULS and SLS checks."
     },
     {
       "keywords": ["study", "prepare", "revision", "exam"],

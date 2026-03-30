@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" role="img" aria-label="Anchored sheet pile wall schematic for port berth design">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155" />
+    </marker>
+  </defs>
+
+  <rect width="1100" height="560" fill="#f8fafc"/>
+  <rect x="30" y="30" width="1040" height="500" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+
+  <text x="60" y="75" font-size="32" fill="#0f172a" font-weight="700">Sheet Pile Wall (Anchored Type)</text>
+
+  <rect x="90" y="290" width="900" height="170" fill="#d6d3d1"/>
+  <text x="760" y="480" font-size="20" fill="#44403c">Soil and Embedment Zone</text>
+
+  <rect x="90" y="180" width="320" height="110" fill="#dbeafe"/>
+  <text x="115" y="170" font-size="20" fill="#1e3a8a" font-weight="700">Sea Side Water</text>
+
+  <rect x="420" y="100" width="20" height="290" fill="#64748b"/>
+  <rect x="700" y="130" width="170" height="40" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+  <line x1="440" y1="150" x2="700" y2="150" stroke="#1f2937" stroke-width="6"/>
+
+  <rect x="440" y="120" width="250" height="170" fill="#e2e8f0" opacity="0.8"/>
+  <text x="500" y="220" font-size="22" fill="#1f2937" font-weight="700">Backfill</text>
+
+  <line x1="210" y1="210" x2="418" y2="205" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="90" y="205" font-size="20" fill="#334155" font-weight="700">Lateral earth/water pressure</text>
+
+  <line x1="574" y1="95" x2="574" y2="145" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="520" y="88" font-size="20" fill="#334155" font-weight="700">Anchor tie-rod</text>
+
+  <line x1="430" y1="390" x2="430" y2="330" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="285" y="420" font-size="20" fill="#334155" font-weight="700">Embedment resists rotation</text>
+
+  <text x="95" y="520" font-size="20" fill="#475569">Typical checks: wall bending, anchor force, deflection, corrosion allowance.</text>
+</svg>

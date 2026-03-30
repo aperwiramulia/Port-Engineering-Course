@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1380 620" role="img" aria-label="Comparison of gravity wall, sheet pile wall, and pile-supported wharf">
+  <rect width="1380" height="620" fill="#f8fafc"/>
+  <rect x="20" y="20" width="1340" height="580" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+
+  <text x="50" y="70" font-size="36" fill="#0f172a" font-weight="700">Quay Structure Comparison</text>
+
+  <rect x="50" y="110" width="400" height="440" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="80" y="150" font-size="25" fill="#9a3412" font-weight="700">Gravity Wall</text>
+  <rect x="85" y="310" width="330" height="180" fill="#d6d3d1"/>
+  <rect x="85" y="230" width="130" height="80" fill="#dbeafe"/>
+  <polygon points="215,200 300,200 355,310 215,310" fill="#f59e0b" stroke="#b45309" stroke-width="3"/>
+  <text x="80" y="525" font-size="18" fill="#7c2d12">Mass provides primary stability</text>
+
+  <rect x="490" y="110" width="400" height="440" rx="10" fill="#f0f9ff" stroke="#bae6fd"/>
+  <text x="520" y="150" font-size="25" fill="#0c4a6e" font-weight="700">Sheet Pile Wall</text>
+  <rect x="525" y="310" width="330" height="180" fill="#d6d3d1"/>
+  <rect x="525" y="230" width="120" height="80" fill="#dbeafe"/>
+  <rect x="660" y="180" width="16" height="210" fill="#64748b"/>
+  <line x1="676" y1="230" x2="800" y2="230" stroke="#1f2937" stroke-width="6"/>
+  <rect x="800" y="208" width="55" height="44" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+  <text x="520" y="525" font-size="18" fill="#0f766e">Flexure + anchor + embedment resistance</text>
+
+  <rect x="930" y="110" width="400" height="440" rx="10" fill="#ecfeff" stroke="#a5f3fc"/>
+  <text x="955" y="150" font-size="25" fill="#155e75" font-weight="700">Pile-Supported Wharf</text>
+  <rect x="965" y="250" width="330" height="60" fill="#dbeafe"/>
+  <rect x="1040" y="205" width="220" height="30" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+  <line x1="1080" y1="235" x2="1080" y2="490" stroke="#475569" stroke-width="11"/>
+  <line x1="1140" y1="235" x2="1140" y2="490" stroke="#475569" stroke-width="11"/>
+  <line x1="1200" y1="235" x2="1200" y2="490" stroke="#475569" stroke-width="11"/>
+  <line x1="1260" y1="235" x2="1260" y2="490" stroke="#475569" stroke-width="11"/>
+  <rect x="965" y="490" width="330" height="30" fill="#d6d3d1"/>
+  <text x="955" y="525" font-size="18" fill="#0f766e">Deck loads transferred through piles</text>
+
+  <text x="70" y="585" font-size="20" fill="#334155">Quick use: strong soil -> gravity wall | fast moderate retaining -> sheet pile | soft soil/seismic -> pile-supported wharf.</text>
+</svg>

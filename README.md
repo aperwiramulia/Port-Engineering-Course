@@ -69,6 +69,14 @@ The validator checks:
 - metadata JSON is valid
 - key fields (`page`, `quickAnswers`, `deadlines`, `links`) follow expected structure
 
+## Assignment Submission Policy
+
+To prevent cross-assignment submission blocking, each assignment must use its own dedicated Google Form link.
+
+- Assignment 1, Assignment 2, Assignment 3, and Assignment 4 should not share the same form URL.
+- If Google Form setting `Limit to 1 response` is enabled, it should apply per assignment form, not across all assignments.
+- Keep `assignments.html` links and the page `pe-ai-meta` quick answers in sync whenever a form URL changes.
+
 ### Live AI setup with proxy (recommended)
 
 1. Open any page and click the `AI` button.

@@ -36,6 +36,13 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - Truck / rail / plant loading interface
 - Speaker cue: Every component must be sized with the same flow logic.
 
+## Slide 5A - Why Feeders and Transfer Towers Matter
+- Feeders meter cargo discharge from the hopper onto the belt
+- Poor feeder control causes surging, belt overloading, and spillage below the skirt zone
+- Transfer towers are common dust hotspots because material drops, impacts, and changes direction there
+- Good practice: enclosed chutes, skirt sealing, wear liners, dust extraction/suppression, and safe maintenance access
+- Speaker cue: In many bulk terminals, cleanliness and reliability problems start at these transfer points.
+
 ## Slide 6 - Unloader Options
 - Grab ship unloader: flexible and common, moderate spillage control challenge
 - Continuous ship unloader: cleaner and efficient for finer cargo streams

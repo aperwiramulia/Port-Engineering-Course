@@ -5,6 +5,9 @@
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
     </marker>
+    <marker id="arrowLoad" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7c3aed"/>
+    </marker>
   </defs>
   <rect width="1200" height="420" fill="#f8fafc"/>
   <rect x="24" y="24" width="1152" height="372" rx="14" fill="#ffffff" stroke="#d6deea" stroke-width="2"/>
@@ -43,24 +46,28 @@
   <text x="1079" y="172" font-size="15" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">Truck / Rail</text>
   <line x1="1040" y1="165" x2="1065" y2="165" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="58" y="266" width="190" height="30" rx="15" fill="#ede9fe" stroke="#c4b5fd"/>
-  <text x="81" y="286" font-size="14" font-family="Arial, sans-serif" fill="#5b21b6" font-weight="700">LOADING / OUTLOADING</text>
+  <rect x="52" y="258" width="1120" height="112" rx="16" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+  <rect x="58" y="266" width="230" height="34" rx="17" fill="#7c3aed" stroke="#6d28d9"/>
+  <text x="82" y="288" font-size="14" font-family="Arial, sans-serif" fill="#ffffff" font-weight="700">LOADING / OUTLOADING PATH</text>
 
-  <line x1="930" y1="276" x2="930" y2="304" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="812" y="292" font-size="13" font-family="Arial, sans-serif" fill="#6b21a8" font-weight="700">Reclaim from stockyard</text>
+  <line x1="930" y1="276" x2="930" y2="304" stroke="#7c3aed" stroke-width="5" marker-end="url(#arrowLoad)"/>
 
-  <rect x="845" y="308" width="150" height="56" rx="10" fill="#f3e8ff" stroke="#d8b4fe"/>
+  <rect x="845" y="308" width="150" height="56" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="2"/>
   <text x="875" y="330" font-size="15" font-family="Arial, sans-serif" fill="#6b21a8" font-weight="700">Reclaimer +</text>
   <text x="869" y="349" font-size="14" font-family="Arial, sans-serif" fill="#6b21a8" font-weight="700">Outbound Belt</text>
 
-  <rect x="1010" y="308" width="105" height="56" rx="10" fill="#fff7ed" stroke="#fdba74"/>
+  <line x1="995" y1="336" x2="1010" y2="336" stroke="#7c3aed" stroke-width="5" marker-end="url(#arrowLoad)"/>
+  <rect x="1010" y="308" width="105" height="56" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
   <text x="1028" y="340" font-size="15" font-family="Arial, sans-serif" fill="#9a3412" font-weight="700">Ship Loader</text>
-  <line x1="995" y1="336" x2="1010" y2="336" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1128" y="308" width="45" height="56" rx="8" fill="#e0f2fe" stroke="#7dd3fc"/>
+  <line x1="1115" y1="336" x2="1128" y2="336" stroke="#7c3aed" stroke-width="5" marker-end="url(#arrowLoad)"/>
+  <rect x="1128" y="308" width="45" height="56" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
   <text x="1134" y="330" font-size="11.5" font-family="Arial, sans-serif" fill="#0c4a6e" font-weight="700">Export</text>
   <text x="1134" y="346" font-size="11.5" font-family="Arial, sans-serif" fill="#0c4a6e" font-weight="700">Vessel</text>
-  <line x1="1115" y1="336" x2="1128" y2="336" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="1004" y="292" font-size="13" font-family="Arial, sans-serif" fill="#9a3412" font-weight="700">Load to ship / dispatch</text>
 
   <rect x="76" y="374" width="1040" height="28" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-  <text x="97" y="393" font-size="13.5" font-family="Arial, sans-serif" fill="#475569">Upper lane = unloading to storage; lower lane = loading from stockyard to vessel or inland delivery. The bottleneck still governs total capacity.</text>
+  <text x="97" y="393" font-size="13.5" font-family="Arial, sans-serif" fill="#475569">Upper lane = unloading to storage; lower lane = highlighted loading path from stockyard to ship or inland delivery. The bottleneck still governs total capacity.</text>
 </svg>

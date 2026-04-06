@@ -70,6 +70,7 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - System capacity = minimum reliable capacity of the chain
 - Example sequence: unloader -> feeder -> conveyor -> stacker -> reclaimer
 - One undersized transfer point can limit the whole terminal
+- Typical bottleneck causes: truck delay, warehouse not ready, weather disruption, equipment failure, admin delay, and cargo mismatch
 - Speaker cue: Optimize the chain, not just one machine.
 
 ## Slide 12 - Preliminary Sizing Equations

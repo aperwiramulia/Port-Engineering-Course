@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Bulk terminal bottleneck logic</title>
+  <desc id="desc">Rate comparison across unloader, feeder, conveyor, and stacker showing that the minimum reliable rate controls system throughput.</desc>
+  <rect width="1200" height="320" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="272" rx="14" fill="#ffffff" stroke="#d6deea" stroke-width="2"/>
+  <text x="52" y="58" font-size="24" font-family="Arial, sans-serif" fill="#1f2937" font-weight="700">Bottleneck Logic for Terminal Capacity</text>
+
+  <text x="86" y="106" font-size="16" font-family="Arial, sans-serif" fill="#334155" font-weight="700">Illustrative nominal rates</text>
+  <line x1="90" y1="240" x2="1100" y2="240" stroke="#94a3b8" stroke-width="2"/>
+
+  <rect x="130" y="120" width="120" height="120" fill="#bfdbfe" stroke="#60a5fa"/>
+  <text x="156" y="144" font-size="15" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="700">Unloader</text>
+  <text x="165" y="168" font-size="13" font-family="Arial, sans-serif" fill="#334155">1100 t/h</text>
+
+  <rect x="320" y="136" width="120" height="104" fill="#d1fae5" stroke="#34d399"/>
+  <text x="354" y="160" font-size="15" font-family="Arial, sans-serif" fill="#166534" font-weight="700">Feeder</text>
+  <text x="355" y="184" font-size="13" font-family="Arial, sans-serif" fill="#334155">1000 t/h</text>
+
+  <rect x="510" y="150" width="120" height="90" fill="#fee2e2" stroke="#f87171"/>
+  <text x="533" y="174" font-size="15" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">Conveyor</text>
+  <text x="549" y="198" font-size="13" font-family="Arial, sans-serif" fill="#334155">900 t/h</text>
+
+  <rect x="700" y="128" width="120" height="112" fill="#e9d5ff" stroke="#c084fc"/>
+  <text x="724" y="152" font-size="15" font-family="Arial, sans-serif" fill="#6b21a8" font-weight="700">Stacker</text>
+  <text x="735" y="176" font-size="13" font-family="Arial, sans-serif" fill="#334155">1050 t/h</text>
+
+  <rect x="890" y="142" width="120" height="98" fill="#fde68a" stroke="#f59e0b"/>
+  <text x="910" y="166" font-size="15" font-family="Arial, sans-serif" fill="#92400e" font-weight="700">Reclaimer</text>
+  <text x="925" y="190" font-size="13" font-family="Arial, sans-serif" fill="#334155">980 t/h</text>
+
+  <text x="470" y="270" font-size="17" font-family="Arial, sans-serif" fill="#0f172a" font-weight="700">System capacity ≈ min(reliable component rates) = 900 t/h</text>
+  <text x="472" y="292" font-size="13.5" font-family="Arial, sans-serif" fill="#475569">Teaching point: increasing only one machine's nameplate rate does not help if the rest of the chain remains constrained.</text>
+</svg>

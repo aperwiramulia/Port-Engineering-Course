@@ -1832,6 +1832,189 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
   <li><a href="lecture5_slides.md" target="_blank" rel="noopener">Lecture 5 PPT-ready slide script (Markdown)</a></li>
 </ul>
 
+<hr>
+
+<h3>Lecture 6 – Dry Bulk Terminal Design and Material Handling Systems</h3>
+<p>
+  This lecture shifts from waterfront structures into terminal systems, showing how berth interface,
+  unloading equipment, conveyors, and stockyard capacity must be planned as one continuous flow chain.
+</p>
+
+<h4>A. Learning Outcomes</h4>
+<ol>
+  <li>Map the full cargo-flow path for a dry bulk terminal from ship to stockyard to outbound delivery.</li>
+  <li>Differentiate common equipment choices and the project conditions that favor them.</li>
+  <li>Estimate first-pass throughput and storage requirements using concept-level screening equations.</li>
+  <li>Relate safety, dust, reliability, and expandability constraints to terminal layout decisions.</li>
+</ol>
+
+<h4>B. Core Process Flow</h4>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture6_bulk_terminal_flow.svg" alt="Dry bulk terminal flow chain from vessel unloading to stockyard and outbound delivery" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 6 Figure A.</strong> Conceptual dry bulk cargo-flow chain: berth, unloader, hopper, conveyor, stockyard, and dispatch interface.
+  </figcaption>
+</figure>
+<ul>
+  <li><strong>Marine interface:</strong> berth pocket, mooring arrangement, and safe ship-loader/unloader reach.</li>
+  <li><strong>Receiving zone:</strong> hoppers, feeders, and transfer towers must control spillage and dust.</li>
+  <li><strong>Conveying system:</strong> belt width, speed, and reliability define the backbone capacity.</li>
+  <li><strong>Storage and reclaim:</strong> stockyard acts as an operational buffer between vessel arrivals and inland demand.</li>
+</ul>
+
+<h4>C. Common Equipment Options</h4>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tr style="background: #f1f5f9;">
+    <th style="padding: 8px;">Equipment</th>
+    <th style="padding: 8px;">Typical Strength</th>
+    <th style="padding: 8px;">Main Limitation / Watchpoint</th>
+    <th style="padding: 8px;">Typical Use</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Grab ship unloader</td>
+    <td style="padding: 8px;">Flexible for varied bulk cargo and vessel mix</td>
+    <td style="padding: 8px;">Needs careful dust and spillage management</td>
+    <td style="padding: 8px;">General dry bulk, multipurpose terminals</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Continuous ship unloader</td>
+    <td style="padding: 8px;">Stable enclosed flow and good cleanliness</td>
+    <td style="padding: 8px;">Higher specialization and capital cost</td>
+    <td style="padding: 8px;">Dedicated ore, fertilizer, grain, or similar streams</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Mobile harbor crane + hopper</td>
+    <td style="padding: 8px;">High flexibility across cargo types</td>
+    <td style="padding: 8px;">Usually lower dedicated bulk productivity at large scale</td>
+    <td style="padding: 8px;">Small-medium terminals, phased development</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Stacker / reclaimer</td>
+    <td style="padding: 8px;">Efficient stockpile build-up and recovery</td>
+    <td style="padding: 8px;">Needs rail corridor, maintenance access, and layout discipline</td>
+    <td style="padding: 8px;">Dedicated stockyards and high-throughput sites</td>
+  </tr>
+</table>
+
+<h4>D. Stockyard and Layout Logic</h4>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture6_stockyard_layout.svg" alt="Dry bulk stockyard concept with stockpiles, conveyor, reclaim corridor, and drainage controls" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 6 Figure B.</strong> Concept stockyard arrangement with receiving conveyor, stockpiles, reclaim corridor, drainage, and outbound interface.
+  </figcaption>
+</figure>
+<ul>
+  <li>Prefer a <strong>clear linear flow</strong>: berth → receiving → stockyard → reclaim → gate/plant.</li>
+  <li>Reserve working lanes for dozers, reclaimers, fire access, and maintenance vehicles.</li>
+  <li>Separate incompatible cargoes to avoid contamination and quality loss.</li>
+  <li>Plan dust suppression, runoff collection, and wind exposure controls early in the layout.</li>
+</ul>
+
+<h4>E. Preliminary Sizing and Bottleneck Logic</h4>
+<p>
+  The first rule of bulk-terminal design is simple: <strong>the slowest reliable component governs system capacity</strong>.
+</p>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture6_capacity_chain.svg" alt="Illustrative bottleneck logic showing the minimum component rate controls terminal throughput" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 6 Figure C.</strong> Teaching example of bottleneck logic across an unloading-to-stockyard chain.
+  </figcaption>
+</figure>
+<pre>
+Required average throughput = Annual demand / effective operating hours
+Nominal design rate = Required average throughput / utilisation factor
+Indicative storage tonnage = Daily demand * target storage days
+Indicative stockyard area ≈ Storage tonnage / (bulk density * effective stacking height)
+</pre>
+
+<h5>Worked Concept Example</h5>
+<p>
+  Assume annual demand = <strong>4.0 million t/year</strong>, effective operating time = <strong>5,500 h/year</strong>,
+  utilisation target = <strong>0.70</strong>, storage autonomy = <strong>10 days</strong>, and bulk density = <strong>1.6 t/m³</strong>.
+</p>
+<pre>
+Required average throughput = 4,000,000 / 5,500 ≈ 727 t/h
+Nominal design chain rate ≈ 727 / 0.70 ≈ 1,040 t/h
+Daily demand ≈ 4,000,000 / 365 ≈ 10,960 t/day
+10-day storage ≈ 109,600 t
+If effective stacking height = 10 m:
+Base storage footprint ≈ 109,600 / (1.6 * 10) ≈ 6,850 m²
+Practical yard area will be larger after allowing lanes, berms, equipment travel, and drainage.
+</pre>
+
+<h4>F. Operating Risks and Environmental Controls</h4>
+<ul>
+  <li><strong>Dust control:</strong> sprays, covers, enclosed transfer points, wind fences, and good housekeeping.</li>
+  <li><strong>Stormwater management:</strong> runoff channels and sediment traps to keep contaminated water under control.</li>
+  <li><strong>Safety:</strong> belt guarding, lock-out procedures, fire access, and self-heating monitoring for reactive cargoes.</li>
+  <li><strong>Reliability:</strong> maintenance access and selective redundancy can reduce demurrage and downtime risk.</li>
+</ul>
+
+<h4>G. Performance Indicators and Design Checks</h4>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tr style="background: #f1f5f9;">
+    <th style="padding: 8px;">Indicator / Check</th>
+    <th style="padding: 8px;">Why It Matters</th>
+    <th style="padding: 8px;">Concept-Level Interpretation</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Berth Occupancy Ratio (BOR)</td>
+    <td style="padding: 8px;">High BOR means congestion and queueing risk</td>
+    <td style="padding: 8px;">Often screened below about 0.6-0.7 in concept planning</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Net unloading rate</td>
+    <td style="padding: 8px;">Directly affects ship turnaround and demurrage exposure</td>
+    <td style="padding: 8px;">Must reflect realistic operational interruptions, not just nameplate rate</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Conveyor availability</td>
+    <td style="padding: 8px;">A failed belt can stop the terminal</td>
+    <td style="padding: 8px;">Maintenance strategy is as important as installed capacity</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Stockyard utilisation</td>
+    <td style="padding: 8px;">Overfull yards reduce flexibility and increase contamination risk</td>
+    <td style="padding: 8px;">Maintain operational buffer, not just theoretical full storage</td>
+  </tr>
+</table>
+
+<section class="lecture-quiz" aria-label="Lecture 6 in-class quiz">
+  <h4>In-Class Quiz (10-15 Minutes)</h4>
+  <p><strong>Instructions:</strong> Answer individually first, then compare with your group.</p>
+  <ol>
+    <li>Why does the bottleneck define the total terminal capacity?</li>
+    <li>Name two reasons why practical stockyard area exceeds the pure volume-based estimate.</li>
+    <li>When might a continuous ship unloader be preferred over a grab unloader?</li>
+    <li>Give two design measures that reduce dust emissions at a dry bulk terminal.</li>
+    <li>Which KPI is most directly linked to berth congestion risk?</li>
+  </ol>
+  <details>
+    <summary><strong>Answer Key (Open After Discussion)</strong></summary>
+    <ol>
+      <li>Because cargo cannot move faster than the slowest reliable component in the chain.</li>
+      <li>Any valid two: access lanes, berms, equipment travel corridor, drainage, fire roads, or cargo segregation zones.</li>
+      <li>When cargo stream is relatively dedicated and cleaner, more enclosed flow is desired.</li>
+      <li>Any valid two: water sprays, transfer-point enclosure, covered conveyors, wind fences, or housekeeping controls.</li>
+      <li>Berth Occupancy Ratio (BOR).</li>
+    </ol>
+  </details>
+</section>
+
+<h3>Discussion Questions</h3>
+<ol>
+  <li>How should a multipurpose Indonesian terminal balance flexibility against the efficiency of dedicated bulk systems?</li>
+  <li>Which is riskier for project economics: underestimating dust-control needs or underestimating storage buffer size?</li>
+  <li>What expansion reserve should be protected in the initial layout if demand is expected to double later?</li>
+</ol>
+
+<h3>Further Reading and Resources</h3>
+<ul>
+  <li><a href="https://www.pianc.org" target="_blank" rel="noopener">PIANC publications on port terminals and cargo-handling infrastructure</a></li>
+  <li><a href="https://www.worldbank.org/en/topic/transport/publication/port-reform-toolkit" target="_blank" rel="noopener">World Bank – Port Reform Toolkit</a></li>
+  <li><a href="https://www.youtube.com/results?search_query=dry+bulk+terminal+design+conveyor+stockyard" target="_blank" rel="noopener">Educational videos: dry bulk terminal design, conveyors, and stockyards</a></li>
+  <li><a href="lecture6_slides.md" target="_blank" rel="noopener">Lecture 6 PPT-ready slide script (Markdown)</a></li>
+</ul>
 
 </div>
 
@@ -1849,7 +2032,8 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
     "Lecture 2 focuses on port layout, coastal interaction, and sedimentation impacts.",
     "Lecture 3 develops design water level and wave-condition concepts for risk-based port design.",
     "Lecture 4 introduces breakwater typology, Hudson sizing logic, stability checks, and muddy seabed design concerns.",
-    "Lecture 5 covers quay wall typologies, berthing-load framework, fender energy and reaction logic, and preliminary ULS/SLS checks for berth reliability."
+    "Lecture 5 covers quay wall typologies, berthing-load framework, fender energy and reaction logic, and preliminary ULS/SLS checks for berth reliability.",
+    "Lecture 6 introduces dry bulk terminal cargo-flow design, equipment selection, stockyard sizing, bottleneck logic, and environmental controls."
   ],
   "quickAnswers": [
     {
@@ -1873,8 +2057,12 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
       "answer": "Lecture 5 covers gravity/sheet-pile/pile-supported berth concepts, load categories, berthing energy and fender reaction logic, plus preliminary ULS and SLS checks."
     },
     {
+      "keywords": ["lecture 6", "dry bulk", "stockyard", "conveyor", "ship unloader"],
+      "answer": "Lecture 6 covers dry bulk terminal flow, equipment choices, stockyard sizing, bottleneck logic, and dust/reliability controls for practical terminal design."
+    },
+    {
       "keywords": ["study", "prepare", "revision", "exam"],
-      "answer": "For revision, map each lecture concept to design decisions and KPIs: terminal flow logic, berth/yard performance, wave protection, and sediment management."
+      "answer": "For revision, connect each lecture to design decisions and KPIs: coastal risk, structural selection, berth reliability, cargo-flow bottlenecks, and storage logic."
     }
   ],
   "links": [

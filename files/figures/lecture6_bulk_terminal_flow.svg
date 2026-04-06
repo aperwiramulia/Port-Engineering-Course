@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Dry bulk terminal cargo flow</title>
+  <desc id="desc">Conceptual flow from vessel unloading to stockyard and outbound delivery.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="340" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="292" rx="14" fill="#ffffff" stroke="#d6deea" stroke-width="2"/>
+  <text x="52" y="58" font-size="24" font-family="Arial, sans-serif" fill="#1f2937" font-weight="700">Dry Bulk Terminal Flow Chain</text>
+
+  <rect x="58" y="188" width="150" height="60" rx="8" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="83" y="223" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="700">Vessel at Berth</text>
+  <path d="M60 170 L175 170 L200 188 L85 188 Z" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+
+  <rect x="255" y="108" width="150" height="120" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="283" y="144" font-size="17" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="700">Ship Unloader</text>
+  <text x="292" y="169" font-size="13" font-family="Arial, sans-serif" fill="#334155">Grab / Continuous</text>
+  <line x1="214" y1="218" x2="255" y2="218" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="448" y="138" width="118" height="70" rx="10" fill="#fef3c7" stroke="#fbbf24"/>
+  <text x="486" y="169" font-size="16" font-family="Arial, sans-serif" fill="#92400e" font-weight="700">Hopper</text>
+  <text x="472" y="189" font-size="12.5" font-family="Arial, sans-serif" fill="#7c2d12">Feeder + dust control</text>
+  <line x1="405" y1="173" x2="448" y2="173" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="607" y="148" width="170" height="48" rx="8" fill="#dcfce7" stroke="#86efac"/>
+  <text x="645" y="178" font-size="17" font-family="Arial, sans-serif" fill="#166534" font-weight="700">Conveyor Line</text>
+  <line x1="566" y1="173" x2="607" y2="173" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="820" y="98" width="220" height="150" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="885" y="126" font-size="18" font-family="Arial, sans-serif" fill="#0f172a" font-weight="700">Stockyard</text>
+  <polygon points="850,210 900,155 955,210" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="920,210 970,150 1020,210" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <line x1="778" y1="173" x2="820" y2="173" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="848" y="232" font-size="13" font-family="Arial, sans-serif" fill="#475569">Stacking, blending, buffer storage</text>
+
+  <rect x="1068" y="124" width="82" height="92" rx="10" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="1086" y="154" font-size="16" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">Plant /</text>
+  <text x="1085" y="176" font-size="16" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">Truck / Rail</text>
+  <line x1="1040" y1="173" x2="1068" y2="173" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="76" y="270" width="1040" height="28" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="97" y="289" font-size="14" font-family="Arial, sans-serif" fill="#475569">Key rule: the practical terminal capacity is governed by the slowest reliable component in the unloading-to-delivery chain.</text>
+</svg>

@@ -1,13 +1,13 @@
 [
   {
     "topic": "assignment_deadline",
-    "keywords": ["deadline", "due", "assignment 1", "submit", "late policy"],
-    "answer": "Assignment 1 is marked OPEN with deadline 2 March 2026 at 23:59 WIB, with 10% grade deduction per day for late submission. Assignment 2 is marked COMING SOON. Always confirm details on the Assignments page."
+    "keywords": ["deadline", "due", "assignment 1", "assignment 2", "assignment 3", "assignment 4", "assignment 5", "assignment 6", "submit", "late policy"],
+    "answer": "Assignments 5 and 6 are now posted and currently active. Assignment 5 is due 20 April 2026 at 23:59 WIB, and Assignment 6 is due 27 April 2026 at 23:59 WIB. Earlier assignments should be treated as closed unless otherwise announced on the Assignments page."
   },
   {
     "topic": "assignment_submission",
     "keywords": ["submit assignment", "google form", "file name", "pdf", "one submission"],
-    "answer": "Submit Assignment 1 through the official Google Form linked on the Assignments page. Use file name format A1_Name_StudentID.pdf. The page notes that file upload requires Google login and only one submission is allowed."
+    "answer": "Assignments 1, 2, 3, and 4 currently use dedicated Google Forms on the Assignments page. Assignments 5 and 6 are now listed with full instructions, and their separate submission portals will be added there. Use the file-name guidance shown on the page for each assignment."
   },
   {
     "topic": "lecture_1_focus",

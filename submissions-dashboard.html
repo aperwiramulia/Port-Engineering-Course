@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submissions Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    
+    header p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .section {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .section h2 {
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+    }
+    
+    .upload-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .upload-box {
+      border: 2px dashed #3498db;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      background: #ecf0f1;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .upload-box:hover {
+      border-color: #2980b9;
+      background: #d5dbdb;
+    }
+    
+    .upload-box h3 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    
+    .upload-box p {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      margin-bottom: 1rem;
+    }
+    
+    input[type="file"],
+    textarea {
+      display: none;
+    }
+    
+    .file-input-label {
+      background: #3498db;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      transition: background 0.3s;
+      font-weight: 500;
+    }
+    
+    .file-input-label:hover {
+      background: #2980b9;
+    }
+    
+    textarea {
+      display: block !important;
+      width: 100%;
+      min-height: 150px;
+      padding: 1rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+      resize: vertical;
+      margin-bottom: 1rem;
+    }
+    
+    button {
+      background: #27ae60;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    
+    button:hover {
+      background: #229954;
+    }
+    
+    button:disabled {
+      background: #95a5a6;
+      cursor: not-allowed;
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .stat-card.a1 {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .stat-card.a2 {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .stat-card.a3 {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    .stat-card.a4 {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+    
+    .stat-card h3 {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .stat-card .number {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    
+    .stat-card .label {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    
+    .table-responsive {
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    
+    thead {
+      background: #34495e;
+      color: white;
+    }
+    
+    th {
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    
+    tr:hover {
+      background: #f8f9fa;
+    }
+    
+    .status-submitted {
+      color: #27ae60;
+      font-weight: 600;
+    }
+    
+    .status-pending {
+      color: #e74c3c;
+      font-weight: 600;
+    }
+    
+    .check-mark {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: #27ae60;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .cross-mark {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: #e74c3c;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #7f8c8d;
+    }
+    
+    .empty-state p {
+      margin-bottom: 1rem;
+    }
+    
+    .instructions {
+      background: #ecf0f1;
+      padding: 1rem;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .instructions h4 {
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    
+    .instructions ol {
+      margin-left: 1.5rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    
+    .instructions li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .instructions code {
+      background: white;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .upload-area {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats {
+        grid-template-columns: 1fr;
+      }
+      
+      header h1 {
+        font-size: 1.5rem;
+      }
+      
+      .section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Submissions Dashboard</h1>
+  <p>Track student submissions for Assignments 1–4</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Import Submission Data</h2>
+    
+    <div class="instructions">
+      <h4>How to use:</h4>
+      <ol>
+        <li>Open each Google Form (Assignments 1–4) and click the <strong>Responses</strong> tab</li>
+        <li>Click the <strong>three-dot menu</strong> → <strong>Download responses (.csv)</strong></li>
+        <li>Paste the CSV content below or upload the file</li>
+        <li>The dashboard will automatically extract and display student submission status</li>
+      </ol>
+    </div>
+
+    <div class="upload-area">
+      <div class="upload-box">
+        <h3>Upload CSV Files</h3>
+        <p>Select Assignment 1–4 CSV files</p>
+        <label class="file-input-label" for="csv-upload">
+          Choose Files
+        </label>
+        <input type="file" id="csv-upload" accept=".csv" multiple>
+      </div>
+      
+      <div class="upload-box">
+        <h3>Paste CSV Data</h3>
+        <p>Or paste directly below:</p>
+        <textarea id="csv-paste" placeholder="Paste CSV content here (from Google Forms)..."></textarea>
+        <button onclick="parsePastedCSV()">Parse Data</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="summary-section" style="display: none;">
+    <h2>Summary Statistics</h2>
+    <div class="stats" id="stats-container"></div>
+  </div>
+
+  <div class="section" id="table-section" style="display: none;">
+    <h2>Student Submissions</h2>
+    <div class="table-responsive">
+      <table id="submissions-table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Assignment 1</th>
+            <th>Assignment 2</th>
+            <th>Assignment 3</th>
+            <th>Assignment 4</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section" id="empty-state">
+    <div class="empty-state">
+      <p>📋 No submission data imported yet</p>
+      <p style="font-size: 0.9rem; color: #95a5a6;">Import CSV files from your Google Forms to see the dashboard</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Port Engineering Course – Submissions Dashboard
+</footer>
+
+<script>
+  const submissions = {
+    'A1': new Set(),
+    'A2': new Set(),
+    'A3': new Set(),
+    'A4': new Set()
+  };
+
+  const submissionsByStudent = {};
+
+  document.getElementById('csv-upload').addEventListener('change', (e) => {
+    Array.from(e.target.files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        parseCSV(event.target.result);
+      };
+      reader.readAsText(file);
+    });
+  });
+
+  function parseCSV(csv) {
+    const lines = csv.trim().split('\n');
+    if (lines.length < 2) return;
+
+    const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
+    const nameIndex = headers.findIndex(h => h.includes('name'));
+    const emailIndex = headers.findIndex(h => h.includes('email'));
+
+    // Detect assignment based on form structure
+    let assignment = '';
+    const formContent = csv.toLowerCase();
+    if (formContent.includes('cargo typology') || formContent.includes('container') || formContent.includes('multipurpose')) {
+      assignment = 'A1';
+    } else if (formContent.includes('port layout') || formContent.includes('conceptual') && formContent.includes('design')) {
+      assignment = 'A2';
+    } else if (formContent.includes('water level') || formContent.includes('design water')) {
+      assignment = 'A3';
+    } else if (formContent.includes('breakwater') && formContent.includes('stability')) {
+      assignment = 'A4';
+    }
+
+    for (let i = 1; i < lines.length; i++) {
+      if (!lines[i].trim()) continue;
+      const cells = lines[i].split(',').map(c => c.trim());
+      if (nameIndex >= 0 && cells[nameIndex]) {
+        const studentName = cells[nameIndex];
+        const studentEmail = emailIndex >= 0 ? cells[emailIndex] : '';
+
+        if (!submissionsByStudent[studentName]) {
+          submissionsByStudent[studentName] = {
+            email: studentEmail,
+            A1: false,
+            A2: false,
+            A3: false,
+            A4: false
+          };
+        }
+
+        if (assignment) {
+          submissionsByStudent[studentName][assignment] = true;
+          submissions[assignment].add(studentName);
+        }
+      }
+    }
+
+    displayDashboard();
+  }
+
+  function parsePastedCSV() {
+    const text = document.getElementById('csv-paste').value.trim();
+    if (!text) {
+      alert('Please paste CSV content first');
+      return;
+    }
+    parseCSV(text);
+    document.getElementById('csv-paste').value = '';
+  }
+
+  function displayDashboard() {
+    const students = Object.keys(submissionsByStudent).sort();
+    
+    if (students.length === 0) return;
+
+    // Show/hide sections
+    document.getElementById('empty-state').style.display = 'none';
+    document.getElementById('summary-section').style.display = 'block';
+    document.getElementById('table-section').style.display = 'block';
+
+    // Update stats
+    const statsHtml = `
+      <div class="stat-card a1">
+        <h3>Assignment 1</h3>
+        <div class="number">${submissions['A1'].size}</div>
+        <div class="label">Submitted</div>
+      </div>
+      <div class="stat-card a2">
+        <h3>Assignment 2</h3>
+        <div class="number">${submissions['A2'].size}</div>
+        <div class="label">Submitted</div>
+      </div>
+      <div class="stat-card a3">
+        <h3>Assignment 3</h3>
+        <div class="number">${submissions['A3'].size}</div>
+        <div class="label">Submitted</div>
+      </div>
+      <div class="stat-card a4">
+        <h3>Assignment 4</h3>
+        <div class="number">${submissions['A4'].size}</div>
+        <div class="label">Submitted</div>
+      </div>
+    `;
+    document.getElementById('stats-container').innerHTML = statsHtml;
+
+    // Update table
+    const tbody = document.getElementById('table-body');
+    tbody.innerHTML = students.map(name => {
+      const data = submissionsByStudent[name];
+      return `
+        <tr>
+          <td><strong>${name}</strong></td>
+          <td>${data.email}</td>
+          <td>${data.A1 ? '<span class="check-mark">✓</span>' : '<span class="cross-mark">✗</span>'}</td>
+          <td>${data.A2 ? '<span class="check-mark">✓</span>' : '<span class="cross-mark">✗</span>'}</td>
+          <td>${data.A3 ? '<span class="check-mark">✓</span>' : '<span class="cross-mark">✗</span>'}</td>
+          <td>${data.A4 ? '<span class="check-mark">✓</span>' : '<span class="cross-mark">✗</span>'}</td>
+        </tr>
+      `;
+    }).join('');
+  }
+</script>
+
+</body>
+</html>

@@ -59,8 +59,8 @@ table{margin-top:15px;font-size:0.95em;width:100%;border-collapse:collapse}
 th,td{padding:10px;border-bottom:1px solid #eef2f7}
 th{background:#fafafa}
 
-details{background:#ffffff;border:1px solid #e6eef9;border-radius:10px;padding:12px 16px;margin:14px 0}
-summary{cursor:pointer}
+details{display:block;width:100%;background:#ffffff;border:1px solid #e6eef9;border-radius:10px;padding:12px 16px;margin:14px 0;box-sizing:border-box}
+summary{cursor:pointer;display:block}
 summary h2{display:inline;margin:0}
 
 .resources{margin-top:25px;padding:22px;border-radius:12px;background:linear-gradient(180deg,#fbfdff 0%,#f6f9ff 100%);border:1px solid #e9f0fb}
@@ -74,7 +74,8 @@ summary h2{display:inline;margin:0}
 
 .submit-btn{display:inline-block;padding:12px 20px;background:linear-gradient(180deg,var(--accent),#2563eb);color:#fff;text-decoration:none;border-radius:10px;font-weight:700;box-shadow:0 8px 20px rgba(37,99,235,0.12)}
 
-.assignment-status{background:#fbfdff;border-left:6px solid var(--accent-2);padding:16px 18px;margin:20px 0;border-radius:10px}
+.assignment-status{background:#fbfdff;border-left:6px solid var(--accent-2);padding:16px 18px;margin:20px 0;border-radius:10px;display:block;width:100%}
+.assignment-item{display:block;width:100%;clear:both}
 .status-open{color:#15803d;font-weight:700;padding:4px 8px;background:#ecfdf5;border-radius:20px}
 .status-closed{color:#b91c1c;font-weight:700;padding:4px 8px;background:#fff1f2;border-radius:20px}
 

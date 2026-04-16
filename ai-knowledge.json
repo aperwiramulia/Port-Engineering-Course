@@ -7,7 +7,7 @@
   {
     "topic": "assignment_submission",
     "keywords": ["submit assignment", "google form", "file name", "pdf", "one submission"],
-    "answer": "Assignments 1, 2, 3, and 4 currently use dedicated Google Forms on the Assignments page. Assignments 5 and 6 are now listed with full instructions, and their separate submission portals will be added there. Use the file-name guidance shown on the page for each assignment."
+    "answer": "Assignments 1 to 6 each have dedicated submission guidance on the Assignments page. Assignment 5 and Assignment 6 currently include their own separate Google Forms there. Use the file-name guidance shown on the page for each assignment."
   },
   {
     "topic": "lecture_1_focus",
@@ -18,6 +18,11 @@
     "topic": "lecture_2_focus",
     "keywords": ["lecture 2", "layout", "planning", "coastal interaction", "sedimentation", "estuary"],
     "answer": "Lecture 2 focuses on conceptual port layout, functional zoning, wave exposure, and sedimentation risk. Prioritize safe entrance alignment, protected basin design, and practical cargo flow between berth, storage, and gate connections."
+  },
+  {
+    "topic": "lecture_6_focus",
+    "keywords": ["lecture 6", "bulk terminal", "dry bulk", "liquid bulk", "stockyard", "tank farm", "pipeline", "conveyor"],
+    "answer": "Lecture 6 covers both dry bulk and liquid bulk terminal design. The lecture compares stockyard-and-conveyor logic for dry bulk with pipeline-and-tank-farm logic for liquid bulk, including throughput sizing, storage sizing, bottlenecks, and safety/environmental controls."
   },
   {
     "topic": "attendance",
@@ -63,6 +68,11 @@
     "topic": "terminal_types",
     "keywords": ["types of terminal", "terminal classification", "container terminal", "bulk terminal", "ro-ro terminal"],
     "answer": "Main terminal types are: container terminal (TEU-oriented), dry bulk terminal (unloader-conveyor-stockyard flow), liquid bulk terminal (pipeline-tank systems), general cargo terminal (break-bulk handling), and Ro-Ro terminal (ramp-based vehicle flow)."
+  },
+  {
+    "topic": "assignment_6_scope",
+    "keywords": ["assignment 6", "bulk terminal assignment", "dry bulk assignment", "liquid bulk assignment", "tank farm", "stockyard"],
+    "answer": "Assignment 6 asks students to choose either a dry bulk or liquid bulk terminal scenario, then complete throughput and storage calculations, recommend a handling chain, identify bottlenecks and KPIs, and propose suitable environmental and safety controls."
   },
   {
     "topic": "river_port_risks",

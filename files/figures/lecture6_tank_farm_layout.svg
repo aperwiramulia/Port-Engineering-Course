@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Concept liquid bulk tank farm layout</title>
+  <desc id="desc">Illustrative tank farm layout showing bunded storage tanks, pump house, truck loading rack, fire-water loop, controlled drainage, and road access.</desc>
+  <rect width="1200" height="420" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="372" rx="14" fill="#ffffff" stroke="#d6deea" stroke-width="2"/>
+  <text x="52" y="58" font-size="24" font-family="Arial, sans-serif" fill="#1f2937" font-weight="700">Concept Tank Farm Layout and Safety Zoning</text>
+
+  <rect x="58" y="86" width="708" height="260" rx="16" fill="#fefce8" stroke="#facc15" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="84" y="112" font-size="18" font-family="Arial, sans-serif" fill="#854d0e" font-weight="700">Bunded Tank Area</text>
+  <text x="84" y="132" font-size="13" font-family="Arial, sans-serif" fill="#713f12">Containment wall keeps spills inside the controlled drainage zone.</text>
+
+  <rect x="112" y="162" width="120" height="132" rx="60" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+  <text x="135" y="228" font-size="18" font-family="Arial, sans-serif" fill="#92400e" font-weight="700">Tank 1</text>
+
+  <rect x="274" y="150" width="140" height="144" rx="70" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+  <text x="313" y="226" font-size="18" font-family="Arial, sans-serif" fill="#9a3412" font-weight="700">Tank 2</text>
+
+  <rect x="458" y="174" width="96" height="120" rx="48" fill="#ffedd5" stroke="#fdba74" stroke-width="2"/>
+  <text x="480" y="238" font-size="18" font-family="Arial, sans-serif" fill="#9a3412" font-weight="700">Tank 3</text>
+
+  <rect x="594" y="186" width="118" height="96" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="623" y="222" font-size="18" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="700">Pump House</text>
+  <text x="617" y="246" font-size="13" font-family="Arial, sans-serif" fill="#475569">Transfer, recirculation,</text>
+  <text x="627" y="264" font-size="13" font-family="Arial, sans-serif" fill="#475569">and isolation valves</text>
+
+  <path d="M98 324 L726 324" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <path d="M172 324 L172 294" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <path d="M344 324 L344 294" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <path d="M506 324 L506 294" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <path d="M654 324 L654 282" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <text x="496" y="342" font-size="13" font-family="Arial, sans-serif" fill="#115e59" font-weight="700">Main product header</text>
+
+  <rect x="810" y="110" width="296" height="82" rx="12" fill="#ecfccb" stroke="#84cc16" stroke-width="2"/>
+  <text x="892" y="142" font-size="18" font-family="Arial, sans-serif" fill="#3f6212" font-weight="700">Truck Loading Rack</text>
+  <text x="850" y="166" font-size="13" font-family="Arial, sans-serif" fill="#4d7c0f">Metering, overfill checks, grounding, and controlled dispatch queue</text>
+
+  <rect x="810" y="224" width="296" height="62" rx="12" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <text x="882" y="258" font-size="18" font-family="Arial, sans-serif" fill="#075985" font-weight="700">Fire-Water / Foam Loop</text>
+
+  <rect x="810" y="306" width="296" height="40" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="862" y="331" font-size="15" font-family="Arial, sans-serif" fill="#334155" font-weight="700">Road Access and Emergency Route</text>
+
+  <path d="M766 144 L810 144" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <path d="M766 324 L958 324 L958 192" stroke="#0f766e" stroke-width="6" fill="none"/>
+  <text x="788" y="375" font-size="13" font-family="Arial, sans-serif" fill="#475569">Dispatch line and access kept outside primary bund where possible.</text>
+
+  <path d="M70 360 Q412 388 754 360" stroke="#2563eb" stroke-width="4" stroke-dasharray="8 6" fill="none"/>
+  <text x="270" y="392" font-size="13" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="700">Controlled drainage inside bund to slop / oily-water collection point</text>
+</svg>

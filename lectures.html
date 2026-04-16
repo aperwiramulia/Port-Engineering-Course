@@ -1845,21 +1845,21 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
 
 <details class="lecture">
   <summary class="lecture-title">
-  Lecture 6 – Dry Bulk Terminal Design and Material Handling Systems
+  Lecture 6 – Dry and Liquid Bulk Terminal Design and Material Handling Systems
 </summary>
 
   <div class="lecture-content">
 <p>
   This lecture shifts from waterfront structures into terminal systems, showing how berth interface,
-  unloading equipment, conveyors, and stockyard capacity must be planned as one continuous flow chain.
+  unloading or transfer equipment, conveyors or pipelines, and stockyard or tank-farm capacity must be planned as one continuous flow chain.
 </p>
 
 <h4>A. Learning Outcomes</h4>
 <ol>
-  <li>Map the full cargo-flow path for a dry bulk terminal from ship to stockyard to outbound delivery.</li>
-  <li>Differentiate common equipment choices and the project conditions that favor them.</li>
+  <li>Map the full cargo-flow path for both dry bulk and liquid bulk terminals from ship interface to storage and outbound delivery.</li>
+  <li>Differentiate common equipment choices and the project conditions that favor them for solids and liquids.</li>
   <li>Estimate first-pass throughput and storage requirements using concept-level screening equations.</li>
-  <li>Relate safety, dust, reliability, and expandability constraints to terminal layout decisions.</li>
+  <li>Relate safety, dust, containment, reliability, and expandability constraints to terminal layout decisions.</li>
 </ol>
 
 <h4>B. Core Process Flow</h4>
@@ -1874,6 +1874,13 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
   <li><strong>Receiving zone:</strong> hoppers, feeders, and transfer towers must control spillage and dust.</li>
   <li><strong>Conveying system:</strong> belt width, speed, and reliability define the backbone capacity.</li>
   <li><strong>Storage and reclaim:</strong> stockyard acts as an operational buffer between vessel arrivals and inland demand.</li>
+</ul>
+<p><strong>Equivalent liquid bulk flow logic:</strong></p>
+<ul>
+  <li><strong>Marine transfer interface:</strong> loading arms or certified hoses connect the ship manifold to shore safely.</li>
+  <li><strong>Transfer system:</strong> pumps, valves, metering skids, and pipelines control rate, pressure, and routing.</li>
+  <li><strong>Tank farm:</strong> tanks provide storage autonomy, product segregation, and surge buffering.</li>
+  <li><strong>Outbound delivery:</strong> pumps feed inland pipelines, truck racks, rail loading, or process plant demand.</li>
 </ul>
 <p><strong>Why feeders and transfer towers matter:</strong></p>
 <ul>
@@ -1921,6 +1928,12 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
     <td style="padding: 8px;">Needs rail corridor, maintenance access, and layout discipline</td>
     <td style="padding: 8px;">Dedicated stockyards and high-throughput sites</td>
   </tr>
+  <tr>
+    <td style="padding: 8px;">Marine loading arm + transfer pumps</td>
+    <td style="padding: 8px;">Closed transfer, controlled product routing, and strong spill prevention</td>
+    <td style="padding: 8px;">Needs disciplined maintenance, ESD logic, and product-compatible seals/materials</td>
+    <td style="padding: 8px;">Oil, fuel, chemicals, edible oils, and other liquid bulk terminals</td>
+  </tr>
 </table>
 
 <h4>D. Stockyard and Layout Logic</h4>
@@ -1943,7 +1956,32 @@ E = 0.5 * 6.0e7 * (0.15)^2 * 1.10 * 0.90
   </figcaption>
 </figure>
 
-<h4>E. Preliminary Sizing and Bottleneck Logic</h4>
+<h4>E. Liquid Bulk Terminal Logic</h4>
+<p>
+  Liquid bulk terminals use a different handling physics from dry bulk terminals. There is no stockpile or conveyor belt;
+  instead, the system depends on controlled hydraulic transfer, pressure management, product compatibility, and secure containment.
+</p>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture6_liquid_bulk_flow.svg?v=20260416a" alt="Liquid bulk terminal flow chain showing vessel transfer through loading arms, manifold, pump station, and tank farm to truck rack or outbound pipeline" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 6 Figure D.</strong> Liquid bulk transfer chain from ship-shore interface through pumps and pipelines to tank storage and inland dispatch.
+  </figcaption>
+</figure>
+<ul>
+  <li><strong>Berth or jetty:</strong> geometry must safely accommodate loading-arm reach, hose handling, and ship motion limits.</li>
+  <li><strong>Ship-shore transfer:</strong> marine loading arms, hoses, manifolds, quick-connect systems, and emergency release systems must suit the product hazard level.</li>
+  <li><strong>Pipelines and pumps:</strong> concept design checks flow rate, pressure loss, product viscosity, and the consequences of surge or shutdown.</li>
+  <li><strong>Tank farm:</strong> tanks provide storage autonomy, batch segregation, and settling or operational buffer capacity.</li>
+  <li><strong>Containment logic:</strong> bunds, isolation valves, overfill protection, drainage segregation, and firefighting systems are core infrastructure.</li>
+</ul>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture6_tank_farm_layout.svg?v=20260416a" alt="Concept liquid bulk tank farm layout showing bunded tanks, pump house, truck rack, fire-water loop, and controlled drainage" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 6 Figure E.</strong> Concept liquid-bulk tank-farm arrangement showing product tanks, bunding, pump area, truck loading, and fire-safety separation.
+  </figcaption>
+</figure>
+
+<h4>F. Preliminary Sizing and Bottleneck Logic</h4>
 <p>
   The first rule of bulk-terminal design is simple: <strong>the slowest reliable component governs system capacity</strong>.
 </p>
@@ -1984,15 +2022,31 @@ Base storage footprint ≈ 109,600 / (1.6 * 10) ≈ 6,850 m²
 Practical yard area will be larger after allowing lanes, berms, equipment travel, and drainage.
 </pre>
 
-<h4>F. Operating Risks and Environmental Controls</h4>
+<h5>Liquid Bulk Screening Example</h5>
+<p>
+  Assume annual demand = <strong>3.2 million t/year</strong>, effective operating time = <strong>6,000 h/year</strong>,
+  utilisation target = <strong>0.75</strong>, storage autonomy = <strong>12 days</strong>, and product density = <strong>0.85 t/m³</strong>.
+</p>
+<pre>
+Required average transfer rate = 3,200,000 / 6,000 ≈ 533 t/h
+Nominal design transfer rate ≈ 533 / 0.75 ≈ 710 t/h
+Daily demand ≈ 3,200,000 / 365 ≈ 8,770 t/day
+12-day storage ≈ 105,240 t
+Indicative storage volume ≈ 105,240 / 0.85 ≈ 123,800 m³
+Pipeline and pump sizing must then check allowable velocity, friction loss, pressure rating, and shutdown behavior.
+</pre>
+
+<h4>G. Operating Risks and Environmental Controls</h4>
 <ul>
   <li><strong>Dust control:</strong> sprays, covers, enclosed transfer points, wind fences, and good housekeeping.</li>
   <li><strong>Stormwater management:</strong> runoff channels and sediment traps to keep contaminated water under control.</li>
   <li><strong>Safety:</strong> belt guarding, lock-out procedures, fire access, and self-heating monitoring for reactive cargoes.</li>
-  <li><strong>Reliability:</strong> maintenance access and selective redundancy can reduce demurrage and downtime risk.</li>
+  <li><strong>Liquid-bulk containment:</strong> bund walls, slop collection, leak detection, overfill alarms, and segregated drainage are mandatory design elements.</li>
+  <li><strong>Hazard management:</strong> hazardous-area zoning, foam or fixed firefighting systems, bonding/grounding, gas detection, and emergency shut-down logic reduce escalation risk.</li>
+  <li><strong>Reliability:</strong> maintenance access and selective redundancy can reduce demurrage and downtime risk in both conveyor and pipeline systems.</li>
 </ul>
 
-<h4>G. Performance Indicators and Design Checks</h4>
+<h4>H. Performance Indicators and Design Checks</h4>
 <table style="border-collapse: collapse; width: 100%;" border="1">
   <tr style="background: #f1f5f9;">
     <th style="padding: 8px;">Indicator / Check</th>
@@ -2019,6 +2073,16 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
     <td style="padding: 8px;">Overfull yards reduce flexibility and increase contamination risk</td>
     <td style="padding: 8px;">Maintain operational buffer, not just theoretical full storage</td>
   </tr>
+  <tr>
+    <td style="padding: 8px;">Tank-farm utilisation</td>
+    <td style="padding: 8px;">Low spare capacity reduces schedule flexibility and emergency margin</td>
+    <td style="padding: 8px;">Working inventory should leave room for segregation, settling, and contingency response</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Transfer rate and line availability</td>
+    <td style="padding: 8px;">Pumps, loading arms, or a blocked line can stop vessel operations immediately</td>
+    <td style="padding: 8px;">Check realistic transfer rate, changeover time, and shutdown / restart discipline</td>
+  </tr>
 </table>
 
 <section class="lecture-quiz" aria-label="Lecture 6 in-class quiz">
@@ -2028,7 +2092,7 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
     <li>Why does the bottleneck define the total terminal capacity?</li>
     <li>Name two reasons why practical stockyard area exceeds the pure volume-based estimate.</li>
     <li>When might a continuous ship unloader be preferred over a grab unloader?</li>
-    <li>Give two design measures that reduce dust emissions at a dry bulk terminal.</li>
+    <li>Give two design measures that reduce dust emissions at a dry bulk terminal and two that reduce spill/fire risk at a liquid bulk terminal.</li>
     <li>Which KPI is most directly linked to berth congestion risk?</li>
   </ol>
   <details>
@@ -2037,7 +2101,7 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
       <li>Because cargo cannot move faster than the slowest reliable component in the chain.</li>
       <li>Any valid two: access lanes, berms, equipment travel corridor, drainage, fire roads, or cargo segregation zones.</li>
       <li>When cargo stream is relatively dedicated and cleaner, more enclosed flow is desired.</li>
-      <li>Any valid two: water sprays, transfer-point enclosure, covered conveyors, wind fences, or housekeeping controls.</li>
+      <li>Any valid dry-bulk two: water sprays, transfer-point enclosure, covered conveyors, wind fences, or housekeeping controls. Any valid liquid-bulk two: bund walls, overfill protection, leak detection, ESD logic, fixed firefighting, or segregated drainage.</li>
       <li>Berth Occupancy Ratio (BOR).</li>
     </ol>
   </details>
@@ -2045,9 +2109,9 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
 
 <h3>Discussion Questions</h3>
 <ol>
-  <li>How should a multipurpose Indonesian terminal balance flexibility against the efficiency of dedicated bulk systems?</li>
-  <li>Which is riskier for project economics: underestimating dust-control needs or underestimating storage buffer size?</li>
-  <li>What expansion reserve should be protected in the initial layout if demand is expected to double later?</li>
+  <li>How should a multipurpose Indonesian terminal balance flexibility against the efficiency of dedicated dry-bulk and liquid-bulk systems?</li>
+  <li>Which is riskier for project economics: underestimating dust-control needs for dry bulk or underestimating containment and tank-farm reserve for liquid bulk?</li>
+  <li>What expansion reserve should be protected in the initial layout if demand is expected to double later: stockyard corridor, extra tank pad, or both?</li>
 </ol>
 
 <h3>Further Reading and Resources</h3>
@@ -2055,6 +2119,7 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
   <li><a href="https://www.pianc.org" target="_blank" rel="noopener">PIANC publications on port terminals and cargo-handling infrastructure</a></li>
   <li><a href="https://www.worldbank.org/en/topic/transport/publication/port-reform-toolkit" target="_blank" rel="noopener">World Bank – Port Reform Toolkit</a></li>
   <li><a href="https://www.youtube.com/results?search_query=dry+bulk+terminal+design+conveyor+stockyard" target="_blank" rel="noopener">Educational videos: dry bulk terminal design, conveyors, and stockyards</a></li>
+  <li><a href="https://www.youtube.com/results?search_query=liquid+bulk+terminal+design+tank+farm+marine+loading+arm" target="_blank" rel="noopener">Educational videos: liquid bulk terminal design, tank farms, and marine loading arms</a></li>
   <li><a href="https://youtu.be/Tnnf2UkBgP0?si=htOn1fFCKvSFUX6J" target="_blank" rel="noopener">How a Bulk Carrier Works – Loading, Cargo, and Design Features</a></li>
   <li><a href="lecture6_slides.md" target="_blank" rel="noopener">Lecture 6 PPT-ready slide script (Markdown)</a></li>
 </ul>
@@ -2079,7 +2144,7 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
     "Lecture 3 develops design water level and wave-condition concepts for risk-based port design.",
     "Lecture 4 introduces breakwater typology, Hudson sizing logic, stability checks, and muddy seabed design concerns.",
     "Lecture 5 covers quay wall typologies, berthing-load framework, fender energy and reaction logic, and preliminary ULS/SLS checks for berth reliability.",
-    "Lecture 6 introduces dry bulk terminal cargo-flow design, equipment selection, stockyard sizing, bottleneck logic, and environmental controls."
+    "Lecture 6 introduces both dry bulk and liquid bulk terminal cargo-flow design, equipment selection, storage sizing, bottleneck logic, and safety/environmental controls."
   ],
   "quickAnswers": [
     {
@@ -2103,8 +2168,8 @@ Practical yard area will be larger after allowing lanes, berms, equipment travel
       "answer": "Lecture 5 covers gravity/sheet-pile/pile-supported berth concepts, load categories, berthing energy and fender reaction logic, plus preliminary ULS and SLS checks."
     },
     {
-      "keywords": ["lecture 6", "dry bulk", "stockyard", "conveyor", "ship unloader"],
-      "answer": "Lecture 6 covers dry bulk terminal flow, equipment choices, stockyard sizing, bottleneck logic, and dust/reliability controls for practical terminal design."
+      "keywords": ["lecture 6", "dry bulk", "liquid bulk", "stockyard", "tank farm", "conveyor", "pipeline", "ship unloader"],
+      "answer": "Lecture 6 covers both dry bulk and liquid bulk terminal flow, equipment choices, storage sizing, bottleneck logic, and safety/environmental controls for practical terminal design."
     },
     {
       "keywords": ["study", "prepare", "revision", "exam"],

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Common sedimentation hot spots in a typical seaport</title>
+  <desc id="desc">Conceptual plan-view seaport diagram showing littoral drift at the entrance, breakwater shadow zones, turning basin, berth pockets, inner bend, and river mouth delta front as typical sedimentation hot spots.</desc>
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#dc2626"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#94a3b8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="652" rx="18" fill="#ffffff" stroke="#d6deea" stroke-width="2"/>
+  <text x="56" y="62" font-size="26" font-family="Arial, sans-serif" fill="#1f2937" font-weight="700">Typical Seaport Plan View: Common Sedimentation Hot Spots</text>
+  <text x="56" y="91" font-size="15" font-family="Arial, sans-serif" fill="#475569">Red shaded zones show areas where sediment commonly accumulates because flow slows down, circulation traps fines, or littoral supply intersects the navigation line.</text>
+
+  <rect x="70" y="115" width="130" height="34" rx="17" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="96" y="137" font-size="14" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="700">OPEN SEA</text>
+  <rect x="925" y="115" width="185" height="34" rx="17" fill="#dcfce7" stroke="#86efac"/>
+  <text x="952" y="137" font-size="14" font-family="Arial, sans-serif" fill="#166534" font-weight="700">INNER HARBOR / ESTUARY</text>
+
+  <path d="M70 280 C260 240, 335 245, 450 285 L450 430 C330 390, 245 385, 70 415 Z" fill="#cfe8ff"/>
+  <path d="M450 285 C595 320, 705 335, 825 330 C930 326, 1000 302, 1120 245 L1120 505 C1010 542, 920 570, 795 560 C675 550, 575 528, 450 430 Z" fill="#d9f0ff"/>
+  <path d="M1010 210 C1050 185, 1100 170, 1140 168 L1140 572 C1080 555, 1035 528, 1000 500 C1015 442, 1022 365, 1010 210 Z" fill="#c7f9cc"/>
+
+  <path d="M448 285 L508 190 L540 196 L490 300 Z" fill="#bfc8d6" stroke="#64748b" stroke-width="2"/>
+  <path d="M452 430 L516 523 L548 518 L492 405 Z" fill="#bfc8d6" stroke="#64748b" stroke-width="2"/>
+  <text x="490" y="176" font-size="13" font-family="Arial, sans-serif" fill="#334155" font-weight="700">North breakwater</text>
+  <text x="497" y="555" font-size="13" font-family="Arial, sans-serif" fill="#334155" font-weight="700">South breakwater</text>
+
+  <path d="M70 350 C210 325, 315 318, 430 354" fill="none" stroke="#2563eb" stroke-width="5" stroke-dasharray="10 7" marker-end="url(#arrowBlue)"/>
+  <text x="142" y="302" font-size="14" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="700">Littoral drift / coastal sediment supply</text>
+
+  <path d="M1118 225 C1078 258, 1060 325, 1058 393" fill="none" stroke="#16a34a" stroke-width="5" stroke-dasharray="10 7" marker-end="url(#arrowGray)"/>
+  <text x="885" y="208" font-size="14" font-family="Arial, sans-serif" fill="#166534" font-weight="700">River discharge and fine-sediment input</text>
+
+  <path d="M575 348 C620 324, 665 314, 715 316 C756 318, 795 331, 838 357" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#arrowGray)"/>
+  <text x="625" y="292" font-size="13" font-family="Arial, sans-serif" fill="#475569">Main navigation channel</text>
+
+  <ellipse cx="468" cy="357" rx="42" ry="84" fill="#fca5a5" fill-opacity="0.75" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="575" cy="255" rx="64" ry="38" fill="#fecaca" fill-opacity="0.78" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="575" cy="456" rx="66" ry="38" fill="#fecaca" fill-opacity="0.78" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="744" cy="398" rx="124" ry="84" fill="#fca5a5" fill-opacity="0.62" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="920" cy="335" rx="104" ry="46" fill="#fecaca" fill-opacity="0.78" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="980" cy="505" rx="102" ry="44" fill="#fecaca" fill-opacity="0.78" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="1066" cy="279" rx="76" ry="44" fill="#fca5a5" fill-opacity="0.72" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+
+  <circle cx="742" cy="397" r="62" fill="#ffffff" fill-opacity="0.35" stroke="#94a3b8" stroke-dasharray="8 6" stroke-width="2"/>
+  <text x="699" y="403" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12" font-weight="700">Turning</text>
+  <text x="704" y="424" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12" font-weight="700">basin</text>
+
+  <rect x="845" y="360" width="32" height="94" rx="8" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+  <rect x="885" y="365" width="32" height="88" rx="8" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+  <rect x="925" y="372" width="32" height="82" rx="8" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+  <text x="837" y="476" font-size="13" font-family="Arial, sans-serif" fill="#334155" font-weight="700">Quay wall / berth line</text>
+
+  <line x1="310" y1="174" x2="538" y2="239" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="90" y="145" width="218" height="48" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="110" y="164" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">1. Channel entrance hot spot</text>
+  <text x="110" y="183" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Littoral drift meets the entrance and settles in reduced-energy water.</text>
+
+  <line x1="305" y1="238" x2="525" y2="268" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="95" y="206" width="210" height="48" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="115" y="225" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">2. Breakwater shadow zone</text>
+  <text x="115" y="244" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Suspended material settles behind the sheltered head.</text>
+
+  <line x1="318" y1="500" x2="528" y2="451" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="88" y="474" width="222" height="48" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="108" y="493" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">3. Breakwater shadow zone</text>
+  <text x="108" y="512" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Low-energy water also traps sediment behind the south arm.</text>
+
+  <line x1="586" y1="615" x2="725" y2="468" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="400" y="585" width="180" height="52" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="420" y="605" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">4. Turning basin</text>
+  <text x="420" y="624" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Large calm maneuvering area becomes a fine-sediment trap.</text>
+
+  <line x1="1040" y1="640" x2="945" y2="507" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="956" y="604" width="190" height="50" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="976" y="624" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">5. Berth pockets</text>
+  <text x="976" y="643" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Overdeepened berth areas often need frequent maintenance dredging.</text>
+
+  <line x1="1118" y1="436" x2="992" y2="349" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="986" y="432" width="160" height="48" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="1006" y="452" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">6. Inner bend / confluence</text>
+  <text x="1006" y="471" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Secondary flow redistributes fines and creates shoaling.</text>
+
+  <line x1="828" y1="170" x2="1050" y2="251" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="676" y="144" width="148" height="48" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="696" y="164" font-size="14" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">7. River mouth / delta front</text>
+  <text x="696" y="183" font-size="12.5" font-family="Arial, sans-serif" fill="#7f1d1d">Mixing of river flow, tide, and waves creates unstable shoals.</text>
+
+  <rect x="70" y="624" width="298" height="28" rx="8" fill="#fee2e2" stroke="#fecaca"/>
+  <text x="90" y="643" font-size="13" font-family="Arial, sans-serif" fill="#991b1b" font-weight="700">Red shading = typical sedimentation hot spots requiring monitoring or dredging.</text>
+  <rect x="384" y="624" width="240" height="28" rx="8" fill="#dbeafe" stroke="#bfdbfe"/>
+  <text x="404" y="643" font-size="13" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="700">Blue dashed line = coastal sediment supply / littoral drift.</text>
+  <rect x="642" y="624" width="298" height="28" rx="8" fill="#dcfce7" stroke="#bbf7d0"/>
+  <text x="662" y="643" font-size="13" font-family="Arial, sans-serif" fill="#166534" font-weight="700">Green corridor = estuary or river source feeding fine sediment inward.</text>
+</svg>

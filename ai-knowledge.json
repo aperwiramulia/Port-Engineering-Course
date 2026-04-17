@@ -25,6 +25,11 @@
     "answer": "Lecture 6 covers both dry bulk and liquid bulk terminal design. The lecture compares stockyard-and-conveyor logic for dry bulk with pipeline-and-tank-farm logic for liquid bulk, including throughput sizing, storage sizing, bottlenecks, and safety/environmental controls."
   },
   {
+    "topic": "lecture_7_focus",
+    "keywords": ["lecture 7", "sedimentation", "dredging", "shoaling", "maintenance dredging", "capital dredging", "sediment transport"],
+    "answer": "Lecture 7 covers sediment sources, sediment transport mechanisms, sedimentation hot spots in ports, dredging methods, the main steps of a dredging project, and the criteria used to select an appropriate dredging method."
+  },
+  {
     "topic": "attendance",
     "keywords": ["attendance", "absen", "presence", "class form", "summary"],
     "answer": "Use the Attendance page to fill the embedded attendance form, then review the attendance summary table provided on the same page."

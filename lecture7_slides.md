@@ -54,6 +54,7 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - Berth pockets and overdeepened areas
 - River bends, confluences, and delta-front channels
 - Suggested visual: seaport hotspot diagram showing entrance shoaling, sheltered deposition zones, turning basin, berth pockets, and river-mouth accumulation
+- Suggested visual alternative: reference multipurpose-port layout with numbered hot spots at the entrance, lee zones, turning basin, quay pockets, and side basins
 - Speaker cue: The hotspot map usually follows where water velocity reduces or circulation traps sediment.
 
 ## Slide 9 - Why Berth Pockets and Turning Basins Shoal

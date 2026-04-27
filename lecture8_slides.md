@@ -74,6 +74,7 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - Breast lines resist transverse movement toward or away from the berth
 - Spring lines resist surge and help control fore-aft motion
 - Balanced geometry is usually more important than simply adding more lines
+- Suggested visual: files/figures/lecture8_mooring_line_functions.svg
 - Speaker cue: Students should visualize the mooring pattern as a force system.
 
 ## Slide 12 - Mooring Hardware at the Berth

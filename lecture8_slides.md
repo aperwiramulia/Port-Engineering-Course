@@ -49,47 +49,54 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - Panel size and chain arrangement affect rotation control and corner-contact performance
 - Speaker cue: The rubber unit alone is not the full fender system; panel detailing is critical.
 
-## Slide 8 - Fender Layout Along the Berth
+## Slide 8 - Typical Energy-Absorbing Units (a-l)
+- Suggested visual: files/figures/lecture8_typical_energy_absorbing_units.png
+- (a) Rope fender, (b) Cylindrical rubber, (c) Accordion/ring element, (d) V/arch unit
+- (e) Channel/C-section element, (f) Sandwich unit, (g) Roller type, (h) Hourglass/cone element
+- (i) Spool/bobbin, (j) Boxed tyre, (k) Buckling-column zig-zag element, (l) Pneumatic floating fender
+- Speaker cue: This legacy overview helps students connect modern fender families to older energy-absorbing concepts used in many ports.
+
+## Slide 9 - Fender Layout Along the Berth
 - Spacing depends on vessel hull geometry, allowable panel contact, and eccentric berthing cases
 - Check both full-side contact and corner-contact scenarios
 - Tidal variation and vessel freeboard range may require taller panels or multiple elevation bands
 - Speaker cue: A good unit can still perform badly if spacing and vertical coverage are wrong.
 
-## Slide 9 - Mooring System Functions
+## Slide 10 - Mooring System Functions
 - Hold the ship alongside at the right offset from the berth
 - Limit surge, sway, and yaw during loading, unloading, or waiting
 - Maintain safe gangway, hose, loading-arm, or crane operating conditions
 - Speaker cue: Mooring is about motion control, not only preventing the ship from drifting away.
 
-## Slide 10 - Main Mooring Lines and Their Roles
+## Slide 11 - Main Mooring Lines and Their Roles
 - Head lines and stern lines resist longitudinal drift near the vessel ends
 - Breast lines resist transverse movement toward or away from the berth
 - Spring lines resist surge and help control fore-aft motion
 - Balanced geometry is usually more important than simply adding more lines
 - Speaker cue: Students should visualize the mooring pattern as a force system.
 
-## Slide 11 - Mooring Hardware at the Berth
+## Slide 12 - Mooring Hardware at the Berth
 - Bollards transfer line load into the quay or dolphin structure
 - Quick release hooks are common at tanker and gas berths for rapid safe disconnection
 - Mooring dolphins extend line geometry when the loading platform is too short or too congested
 - Fairleads, capstans, and access arrangements support safe line handling
 - Speaker cue: Hardware selection changes with cargo risk, berth type, and operational discipline.
 
-## Slide 12 - Environmental Loads Acting on a Moored Vessel
+## Slide 13 - Environmental Loads Acting on a Moored Vessel
 - Wind often dominates above-water area loading
 - Current often dominates underwater lateral demand
 - Wave drift and long-period motions can create cyclic line loading
 - Passing ships, tug action, and cargo-transfer transients can add short-duration peaks
 - Speaker cue: Mooring demand is dynamic and site-specific, not a single static number.
 
-## Slide 13 - Good Mooring Arrangement Principles
+## Slide 14 - Good Mooring Arrangement Principles
 - Keep line angles practical in both plan and elevation
 - Avoid over-reliance on a single line group
 - Limit large differences in pretension between similar lines
 - Maintain redundancy so one line failure does not cause immediate loss of control
 - Speaker cue: A mooring plan should remain stable even when some lines slacken with tide or motion.
 
-## Slide 14 - Typical Design Checks
+## Slide 15 - Typical Design Checks
 - Fender energy and reaction within rated performance envelope
 - Panel pressure acceptable for expected vessel hull forms
 - Bollard, anchor, and deck local strength adequate for mooring loads
@@ -97,27 +104,27 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - Vessel motions remain acceptable for cargo transfer and safe access
 - Speaker cue: The governing check may be operational motion, not only ultimate strength.
 
-## Slide 15 - Common Failure Modes and Risks
+## Slide 16 - Common Failure Modes and Risks
 - Over-compression or chain overload in eccentric berthing
 - Excessive berth reaction due to wrong fender type or temperature condition
 - Line snap-back risk from overload or poor line condition
 - Poor dolphin spacing causing bad line angles and unstable mooring behavior
 - Speaker cue: Small layout mistakes can produce serious safety consequences.
 
-## Slide 16 - Special Cases
+## Slide 17 - Special Cases
 - Container berths: panel geometry and clearance must work with flared hulls and variable drafts
 - Tanker berths: quick release hooks, mooring dolphins, and motion limits are tightly linked to loading-arm safety
 - Ro-Ro and ferry berths: rapid berthing cycles may favor robust, low-maintenance fender arrangements
 - Speaker cue: The berth interface should match cargo operation, not just vessel size.
 
-## Slide 17 - Screening Logic for Early Design
+## Slide 18 - Screening Logic for Early Design
 - Start from design vessel envelope, environmental conditions, and berth type
 - Select candidate fender family from energy level, reaction sensitivity, and contact geometry
 - Sketch mooring arrangement before finalizing bollard or dolphin locations
 - Check structural load path back into deck, wall, pile cap, or dolphin piles
 - Speaker cue: Early layout decisions control many later constraints.
 
-## Slide 18 - Lecture Summary
+## Slide 19 - Lecture Summary
 - Fender systems absorb impact and protect both hull and structure
 - Mooring systems control vessel motion under operational and environmental loads
 - Layout, spacing, geometry, and hardware detailing are as important as equipment rating

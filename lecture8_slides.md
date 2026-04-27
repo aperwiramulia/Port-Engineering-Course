@@ -41,6 +41,7 @@ Use this file as a copy-paste source for PowerPoint/Canva.
 - Arch fenders: robust and simple for smaller berths or workboats
 - Cylindrical fenders: simple edge protection for utility or small-vessel berths
 - Pneumatic fenders: floating systems useful for ship-to-ship transfer or temporary berths
+- Suggested visual: files/figures/lecture8_common_fender_types.svg
 - Speaker cue: Fender type depends on vessel class, berth geometry, and operating envelope.
 
 ## Slide 7 - Fender Panels and Fronting

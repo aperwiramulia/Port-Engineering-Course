@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Lecture 9 operation and maintenance cycle</title>
+  <desc id="desc">A circular workflow showing operations, inspection, condition assessment, maintenance planning, intervention, and performance review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c5f8a"/>
+    </marker>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; fill: #163247; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #47657c; }
+      .node { fill: #ffffff; stroke: #9db6ca; stroke-width: 2; }
+      .node-title { font-size: 22px; font-weight: 700; }
+      .node-text { font-size: 16px; fill: #4b6478; }
+      .flow { fill: none; stroke: #2c5f8a; stroke-width: 5; }
+      .center { fill: #17384d; }
+      .center-text { font-size: 28px; font-weight: 700; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)" rx="28"/>
+  <text x="70" y="72" class="title">Port Operation and Maintenance Control Loop</text>
+  <text x="70" y="104" class="subtitle">Daily operations generate signals; inspections and maintenance convert them into reliable service.</text>
+
+  <path class="flow" marker-end="url(#arrow)" d="M 600 190 C 770 190 910 290 960 430"/>
+  <path class="flow" marker-end="url(#arrow)" d="M 930 470 C 880 590 760 650 610 650"/>
+  <path class="flow" marker-end="url(#arrow)" d="M 560 650 C 390 650 270 590 220 470"/>
+  <path class="flow" marker-end="url(#arrow)" d="M 210 430 C 260 290 400 190 570 190"/>
+
+  <circle cx="600" cy="420" r="105" class="center"/>
+  <text x="600" y="405" class="center-text" text-anchor="middle">Reliable</text>
+  <text x="600" y="440" class="center-text" text-anchor="middle">Port Service</text>
+
+  <g transform="translate(450 135)">
+    <rect width="300" height="105" rx="20" class="node"/>
+    <text x="150" y="36" text-anchor="middle" class="node-title">1. Operations</text>
+    <text x="150" y="63" text-anchor="middle" class="node-text">Delay, alarm, spillage, unsafe act,</text>
+    <text x="150" y="84" text-anchor="middle" class="node-text">abnormal motion, vibration, outage</text>
+  </g>
+
+  <g transform="translate(855 370)">
+    <rect width="275" height="110" rx="20" class="node"/>
+    <text x="137.5" y="36" text-anchor="middle" class="node-title">2. Inspection</text>
+    <text x="137.5" y="63" text-anchor="middle" class="node-text">Visual checks, survey, monitoring,</text>
+    <text x="137.5" y="84" text-anchor="middle" class="node-text">test results, defect recording</text>
+  </g>
+
+  <g transform="translate(685 545)">
+    <rect width="325" height="105" rx="20" class="node"/>
+    <text x="162.5" y="36" text-anchor="middle" class="node-title">3. Condition Assessment</text>
+    <text x="162.5" y="63" text-anchor="middle" class="node-text">Criticality, deterioration trend,</text>
+    <text x="162.5" y="84" text-anchor="middle" class="node-text">consequence, intervention threshold</text>
+  </g>
+
+  <g transform="translate(185 545)">
+    <rect width="325" height="105" rx="20" class="node"/>
+    <text x="162.5" y="36" text-anchor="middle" class="node-title">5. Intervention</text>
+    <text x="162.5" y="63" text-anchor="middle" class="node-text">Repair, replace, dredge, recoat,</text>
+    <text x="162.5" y="84" text-anchor="middle" class="node-text">align, clean, test, redesign</text>
+  </g>
+
+  <g transform="translate(70 370)">
+    <rect width="275" height="110" rx="20" class="node"/>
+    <text x="137.5" y="36" text-anchor="middle" class="node-title">6. Performance Review</text>
+    <text x="137.5" y="63" text-anchor="middle" class="node-text">Availability, MTBF, MTTR, backlog,</text>
+    <text x="137.5" y="84" text-anchor="middle" class="node-text">repeat defects, design feedback</text>
+  </g>
+
+  <g transform="translate(185 245)">
+    <rect width="325" height="105" rx="20" class="node"/>
+    <text x="162.5" y="36" text-anchor="middle" class="node-title">4. Maintenance Planning</text>
+    <text x="162.5" y="63" text-anchor="middle" class="node-text">Priority, window, spare parts,</text>
+    <text x="162.5" y="84" text-anchor="middle" class="node-text">permit, contractor, shutdown logic</text>
+  </g>
+</svg>

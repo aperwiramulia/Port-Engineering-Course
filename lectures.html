@@ -2648,6 +2648,227 @@ Pipeline and pump sizing must then check allowable velocity, friction loss, pres
   </div>
 </details>
 
+<hr>
+
+<details class="lecture">
+  <summary class="lecture-title">
+  Lecture 9 – Port Operation and Maintenance
+</summary>
+
+  <div class="lecture-content">
+<p>
+  This lecture connects port engineering design to day-to-day operational reliability. It explains how
+  terminals maintain service, safety, and asset value through inspection, maintenance planning, condition monitoring,
+  and disciplined operating procedures. The core message is that a port performs well only when <strong>operations,
+  maintenance, and engineering feedback</strong> work as one closed loop.
+</p>
+
+<h4>A. Learning Outcomes</h4>
+<ol>
+  <li>Explain why port operation and maintenance directly influence safety, service level, and life-cycle cost.</li>
+  <li>Distinguish corrective, preventive, predictive, and reliability-centered maintenance approaches in port assets.</li>
+  <li>Identify the main operational and maintenance needs of marine structures, cargo systems, utilities, and navigation-support assets.</li>
+  <li>Use practical KPIs and risk logic to prioritize maintenance planning and intervention timing.</li>
+</ol>
+
+<h4>B. Why O&amp;M Matters in Port Engineering</h4>
+<p>
+  A port can be well designed and still perform poorly if its assets are operated badly or maintained too late.
+  Downtime at a berth, conveyor, access road, power supply, or navigation aid can interrupt cargo flow just as seriously
+  as a structural failure. Port O&amp;M therefore sits at the intersection of <strong>availability, safety, cost, and asset durability</strong>.
+</p>
+<ul>
+  <li><strong>Operations</strong> keep cargo, vessels, people, and equipment moving safely and efficiently.</li>
+  <li><strong>Maintenance</strong> preserves asset condition and restores function before failures become disruptive.</li>
+  <li><strong>Engineering feedback</strong> converts recurring faults into design improvements, replacement plans, or operating-rule changes.</li>
+</ul>
+
+<h4>C. The Port O&amp;M Control Loop</h4>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture9_om_cycle.svg?v=20260504a" alt="Operation and maintenance control loop linking operations, inspection, condition assessment, maintenance planning, intervention, and performance review" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 9 Figure A.</strong> Port operation and maintenance work as a continuous control loop rather than separate departments.
+  </figcaption>
+</figure>
+<p>
+  The loop begins with daily operation, where events such as delays, abnormal vibration, corrosion signs, spillage,
+  fender damage, or repeated reset alarms are first observed. These signals feed <strong>inspection and condition assessment</strong>,
+  then into <strong>maintenance planning</strong>, intervention, and performance review. A mature port uses this loop to prevent
+  repeated defects from becoming accepted routine.
+</p>
+
+<h4>D. Main Port Asset Groups and Typical O&amp;M Focus</h4>
+<figure style="margin: 18px 0;">
+  <img src="files/figures/lecture9_asset_matrix.svg?v=20260504a" alt="Matrix of port asset groups and their main operation and maintenance concerns" style="width: 100%; height: auto; border: 1px solid #d6deea; border-radius: 10px; background: #ffffff;" loading="lazy">
+  <figcaption>
+    <strong>Lecture 9 Figure B.</strong> Different asset groups fail differently, so they also need different inspection and maintenance logic.
+  </figcaption>
+</figure>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tr style="background: #f1f5f9;">
+    <th style="padding: 8px;">Asset Group</th>
+    <th style="padding: 8px;">Typical O&amp;M Concern</th>
+    <th style="padding: 8px;">Example Consequence</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Marine structures</td>
+    <td style="padding: 8px;">Corrosion, concrete cracking, joint damage, settlement, scour, fender and bollard deterioration</td>
+    <td style="padding: 8px;">Loss of berth reliability, safety restriction, or reduced allowable vessel class</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Cargo-handling systems</td>
+    <td style="padding: 8px;">Mechanical wear, alignment issues, hydraulic/electrical faults, sensor failure</td>
+    <td style="padding: 8px;">Lower throughput, queue growth, and unplanned stoppage</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Storage and yard systems</td>
+    <td style="padding: 8px;">Pavement distress, drainage blockage, lighting failure, stacking-area damage</td>
+    <td style="padding: 8px;">Unsafe traffic movement, cargo loss, or reduced yard capacity</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Utilities and support systems</td>
+    <td style="padding: 8px;">Power instability, fire system impairment, pump or pipeline leaks, ICT outage</td>
+    <td style="padding: 8px;">Terminal shutdown, safety exposure, or environmental incident</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Navigation and access systems</td>
+    <td style="padding: 8px;">Aids-to-navigation failure, channel shoaling, gate congestion, road-surface degradation</td>
+    <td style="padding: 8px;">Restricted vessel movement, delay, and operating-window loss</td>
+  </tr>
+</table>
+
+<h4>E. Maintenance Strategy Types</h4>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tr style="background: #f1f5f9;">
+    <th style="padding: 8px; width: 18%;">Strategy</th>
+    <th style="padding: 8px;">Meaning</th>
+    <th style="padding: 8px;">Where It Fits</th>
+    <th style="padding: 8px;">Main Caution</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Corrective</td>
+    <td style="padding: 8px;">Repair after failure or unacceptable defect appears</td>
+    <td style="padding: 8px;">Low-criticality items with limited consequence</td>
+    <td style="padding: 8px;">Can create expensive downtime if used on critical assets</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Preventive</td>
+    <td style="padding: 8px;">Planned maintenance at set time or usage intervals</td>
+    <td style="padding: 8px;">Routine inspection, lubrication, coating renewal, scheduled replacement</td>
+    <td style="padding: 8px;">May waste effort if interval is too conservative</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Predictive / condition-based</td>
+    <td style="padding: 8px;">Intervene when monitoring indicates degradation trend</td>
+    <td style="padding: 8px;">Rotating equipment, power systems, structural monitoring, vibration or thermal screening</td>
+    <td style="padding: 8px;">Needs reliable data and disciplined interpretation</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Reliability-centered</td>
+    <td style="padding: 8px;">Choose maintenance method from failure mode, criticality, and consequence</td>
+    <td style="padding: 8px;">High-value multi-asset systems where downtime consequence differs strongly by component</td>
+    <td style="padding: 8px;">Requires better asset records and maintenance management maturity</td>
+  </tr>
+</table>
+<p>
+  The engineering point is not to choose one strategy for everything. A port usually combines them.
+  Critical berth hardware, electrical systems, fire protection, and navigation-support assets rarely justify
+  pure run-to-failure logic.
+</p>
+
+<h4>F. Operational Reliability and Typical KPIs</h4>
+<p>
+  Port O&amp;M decisions should be linked to measurable outcomes. Useful KPIs connect asset condition to service performance,
+  not just maintenance activity counts.
+</p>
+<ul>
+  <li><strong>Availability:</strong> proportion of time a berth, crane, conveyor, pump, or gate system is ready for service.</li>
+  <li><strong>Utilization:</strong> proportion of available time actually used for cargo or vessel operations.</li>
+  <li><strong>MTBF:</strong> mean time between failures for repairable systems.</li>
+  <li><strong>MTTR:</strong> mean time to repair or restore service.</li>
+  <li><strong>Backlog age:</strong> how long deferred maintenance has remained open.</li>
+  <li><strong>Condition index:</strong> rating that summarizes structural, mechanical, or electrical health.</li>
+  <li><strong>Operational consequence:</strong> lost ship-hours, reduced throughput, berth closure time, or safety restrictions.</li>
+</ul>
+
+<h4>G. Inspection and Maintenance Planning Logic</h4>
+<ol>
+  <li><strong>Asset register:</strong> identify what exists, where it is, and why it matters operationally.</li>
+  <li><strong>Criticality ranking:</strong> separate assets that stop the terminal from assets with tolerable temporary failure.</li>
+  <li><strong>Failure-mode thinking:</strong> ask how each asset fails, how the defect is detected, and what the consequence is.</li>
+  <li><strong>Inspection program:</strong> define routine visual checks, periodic detailed inspection, and any condition monitoring needed.</li>
+  <li><strong>Intervention planning:</strong> schedule maintenance inside weather windows, berth idle windows, or shutdown periods.</li>
+  <li><strong>Feedback and review:</strong> update design detail, spare strategy, or operating rule when the same defect repeats.</li>
+</ol>
+
+<h4>H. Typical Port O&amp;M Problem Areas</h4>
+<ul>
+  <li><strong>Berth structures:</strong> splash-zone corrosion, concrete spalling, damaged fenders, loose bolts, and local deck distress.</li>
+  <li><strong>Channels and basins:</strong> sedimentation that reduces depth and operating window if surveys and dredging are delayed.</li>
+  <li><strong>Bulk terminals:</strong> conveyor wear, misalignment, belt spillage, dust-control underperformance, and transfer-point failure.</li>
+  <li><strong>Liquid bulk terminals:</strong> valve malfunction, corrosion under insulation, leak detection gaps, and fire-system readiness.</li>
+  <li><strong>Yard and landside systems:</strong> pavement rutting, drainage clogging, traffic conflict, and lighting outages.</li>
+  <li><strong>Utilities and safety systems:</strong> standby power weakness, pump unreliability, sensor drift, and alarm nuisance leading to poor operator response.</li>
+</ul>
+
+<h4>I. Risk-Based Prioritization</h4>
+<p>
+  A simple screening rule is to prioritize work by <strong>consequence x likelihood x detectability</strong>. Assets with high safety,
+  environmental, or operational consequence deserve earlier intervention even when visible damage still appears moderate.
+  This is why a slightly corroded quick release hook, blocked fire-water pump, or failing substation switchgear can rank above
+  a more obvious but lower-consequence cosmetic defect.
+</p>
+
+<h4>J. O&amp;M and Life-Cycle Engineering</h4>
+<p>
+  Good maintenance is not only repair. It also informs better future design. Repeated fender-anchor damage may signal poor
+  berth geometry, not just weak maintenance. Recurrent pavement distress may reflect drainage and axle-load mismatch.
+  High conveyor downtime may indicate bad redundancy logic or transfer-point design. In this sense, O&amp;M provides the real-world
+  feedback that closes the engineering design loop.
+</p>
+
+<section class="lecture-quiz" aria-label="Lecture 9 in-class quiz">
+  <h4>In-Class Quiz (10-15 Minutes)</h4>
+  <p><strong>Instructions:</strong> Answer individually, then compare your reasoning with a partner.</p>
+  <ol>
+    <li>Why is run-to-failure usually a poor strategy for critical berth hardware or fire-protection systems?</li>
+    <li>State the difference between preventive and predictive maintenance in one or two clear sentences.</li>
+    <li>Name two KPIs that indicate reliability rather than pure activity volume.</li>
+    <li>Why can a port have high equipment utilization but still poor operational reliability?</li>
+    <li>Give one example where repeated maintenance work should trigger a design review instead of only another repair.</li>
+  </ol>
+  <details>
+    <summary><strong>Answer Key (Open After Discussion)</strong></summary>
+    <ol>
+      <li>Because failure consequence can be disproportionate, causing unsafe operation, shutdown, or emergency-response weakness before repair can occur.</li>
+      <li>Preventive maintenance is scheduled by time or usage interval; predictive maintenance is triggered by measured condition or degradation trend.</li>
+      <li>Any valid two such as availability, MTBF, MTTR, condition index, downtime hours, or maintenance backlog age.</li>
+      <li>Because heavily used systems may still suffer repeated unplanned stoppage, poor repairability, or lack of spare capacity.</li>
+      <li>Any valid example such as repeated fender-anchor failure, recurring pavement rutting from drainage weakness, or chronic conveyor transfer-point spillage.</li>
+    </ol>
+  </details>
+</section>
+
+<h3>Discussion Questions</h3>
+<ol>
+  <li>Which is more damaging to long-term port performance: under-maintenance of critical assets or poor operations discipline?</li>
+  <li>How should a port justify preventive maintenance spending when management sees only short-term cost?</li>
+  <li>When should an asset be repaired again, and when should it be redesigned or replaced instead?</li>
+</ol>
+
+<h3>Further Reading and Resources</h3>
+<ul>
+  <li><a href="https://www.pianc.org" target="_blank" rel="noopener">PIANC technical resources on port infrastructure management and maritime asset practice</a></li>
+  <li><a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" target="_blank" rel="noopener">USACE Engineering Manuals and infrastructure-management references</a></li>
+  <li><a href="https://www.reliabilityweb.com" target="_blank" rel="noopener">ReliabilityWeb resources on maintenance and reliability concepts</a></li>
+  <li><a href="https://www.iso.org/iso-55000-asset-management.html" target="_blank" rel="noopener">ISO 55000 overview for asset management principles</a></li>
+  <li><a href="lecture9_slides.md" target="_blank" rel="noopener">Lecture 9 PPT-ready slide script (Markdown)</a></li>
+  <li><a href="https://www.plantservices.com/maintenance-prevention/article/33013465/maintenance-strategies-to-improve-reliability" target="_blank" rel="noopener">Maintenance strategy overview for reliability improvement</a></li>
+</ul>
+
+  </div>
+</details>
+
 </div>
 
 <footer>
@@ -2667,7 +2888,8 @@ Pipeline and pump sizing must then check allowable velocity, friction loss, pres
     "Lecture 5 covers quay wall typologies, berthing-load framework, fender energy and reaction logic, and preliminary ULS/SLS checks for berth reliability.",
     "Lecture 6 introduces both dry bulk and liquid bulk terminal cargo-flow design, equipment selection, storage sizing, bottleneck logic, and safety/environmental controls.",
     "Lecture 7 covers sediment sources, sediment transport mechanisms, sedimentation hot spots, dredging methods, dredging project steps, and dredging method selection criteria.",
-    "Lecture 8 covers fender functions, fender-type comparison, mooring-line roles, berth hardware, and practical design checks for vessel restraint and berth-interface reliability."
+    "Lecture 8 covers fender functions, fender-type comparison, mooring-line roles, berth hardware, and practical design checks for vessel restraint and berth-interface reliability.",
+    "Lecture 9 covers port operation and maintenance, maintenance strategy types, critical asset groups, reliability KPIs, and risk-based maintenance planning."
   ],
   "quickAnswers": [
     {
@@ -2701,6 +2923,10 @@ Pipeline and pump sizing must then check allowable velocity, friction loss, pres
     {
       "keywords": ["lecture 8", "fender", "mooring", "bollard", "mooring dolphin", "quick release hook"],
       "answer": "Lecture 8 explains how fender and mooring systems work together at the berth, compares common fender types, reviews mooring-line functions and berth hardware, and highlights the design checks that govern reaction, line load, and vessel motion control."
+    },
+    {
+      "keywords": ["lecture 9", "operation", "maintenance", "asset management", "reliability", "kpi", "mtbf", "mttr"],
+      "answer": "Lecture 9 explains how ports maintain safe and reliable service through inspection, preventive and predictive maintenance, reliability KPIs, and risk-based prioritization across structures, equipment, utilities, and navigation-support systems."
     },
     {
       "keywords": ["study", "prepare", "revision", "exam"],

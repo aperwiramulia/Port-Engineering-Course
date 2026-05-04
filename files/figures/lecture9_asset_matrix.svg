@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Lecture 9 asset group maintenance matrix</title>
+  <desc id="desc">A matrix summarizing port asset groups and key operation and maintenance concerns.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f6fbff"/>
+    </linearGradient>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; fill: #163247; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #4a697e; }
+      .hdr { fill: #204663; }
+      .hdr-text { font-size: 21px; font-weight: 700; fill: #ffffff; }
+      .cell { fill: url(#panel); stroke: #bdd0df; stroke-width: 2; }
+      .asset { font-size: 22px; font-weight: 700; }
+      .item { font-size: 16px; fill: #496375; }
+      .tag { font-size: 15px; font-weight: 700; fill: #2c5f8a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="#eef5fb" rx="28"/>
+  <text x="60" y="70" class="title">Port Asset O&amp;M Matrix</text>
+  <text x="60" y="102" class="subtitle">Operations and maintenance priorities differ because failure modes and service consequences differ.</text>
+
+  <rect x="60" y="140" width="260" height="58" rx="14" class="hdr"/>
+  <rect x="330" y="140" width="530" height="58" rx="14" class="hdr"/>
+  <rect x="870" y="140" width="270" height="58" rx="14" class="hdr"/>
+  <text x="190" y="176" text-anchor="middle" class="hdr-text">Asset Group</text>
+  <text x="595" y="176" text-anchor="middle" class="hdr-text">Typical O&amp;M Focus</text>
+  <text x="1005" y="176" text-anchor="middle" class="hdr-text">Service Impact</text>
+
+  <g transform="translate(60 215)">
+    <rect width="1080" height="95" rx="18" class="cell"/>
+    <text x="28" y="38" class="asset">Marine structures</text>
+    <text x="300" y="34" class="item">Corrosion, spalling, settlement, scour, fender and bollard condition</text>
+    <text x="300" y="60" class="tag">Inspect:</text><text x="360" y="60" class="item">splash zone, joints, anchor bolts, underwater risk areas</text>
+    <text x="885" y="38" class="item">Berth restriction,</text>
+    <text x="885" y="62" class="item">safety limit, closure</text>
+  </g>
+
+  <g transform="translate(60 325)">
+    <rect width="1080" height="95" rx="18" class="cell"/>
+    <text x="28" y="38" class="asset">Cargo systems</text>
+    <text x="300" y="34" class="item">Wear, misalignment, overheating, hydraulic leaks, electrical and sensor faults</text>
+    <text x="300" y="60" class="tag">Inspect:</text><text x="360" y="60" class="item">vibration, temperature, lubrication, belt tracking, alarms</text>
+    <text x="885" y="38" class="item">Throughput loss, queue</text>
+    <text x="885" y="62" class="item">growth, stoppage</text>
+  </g>
+
+  <g transform="translate(60 435)">
+    <rect width="1080" height="95" rx="18" class="cell"/>
+    <text x="28" y="38" class="asset">Yard and storage</text>
+    <text x="300" y="34" class="item">Pavement distress, drainage blockage, lighting failure, stacking-area damage</text>
+    <text x="300" y="60" class="tag">Inspect:</text><text x="360" y="60" class="item">rutting, flood spots, traffic conflict zones, surface wear</text>
+    <text x="885" y="38" class="item">Unsafe movement,</text>
+    <text x="885" y="62" class="item">capacity reduction</text>
+  </g>
+
+  <g transform="translate(60 545)">
+    <rect width="1080" height="95" rx="18" class="cell"/>
+    <text x="28" y="38" class="asset">Utilities and safety</text>
+    <text x="300" y="34" class="item">Power instability, fire-water weakness, leaks, pump faults, standby failure</text>
+    <text x="300" y="60" class="tag">Inspect:</text><text x="360" y="60" class="item">readiness tests, pressure, switchgear, alarms, emergency isolation</text>
+    <text x="885" y="38" class="item">Terminal shutdown,</text>
+    <text x="885" y="62" class="item">high safety exposure</text>
+  </g>
+
+  <g transform="translate(60 655)">
+    <rect width="1080" height="70" rx="18" class="cell"/>
+    <text x="28" y="42" class="asset">Navigation and access</text>
+    <text x="300" y="34" class="item">Shoaling, buoy failure, road deterioration, gate congestion, signage or lighting weakness</text>
+    <text x="885" y="34" class="item">Restricted movement, delay,</text>
+    <text x="885" y="58" class="item">loss of operating window</text>
+  </g>
+</svg>
